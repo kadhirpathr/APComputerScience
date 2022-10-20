@@ -18,6 +18,6 @@ public class Section3 {
         System.out.println("The product of " + num1 + ", " + num2 + ", and " + num3 + " is " + product);
     }
     public static void main(String[] args) {
-
+        assignment8();
     }
 }

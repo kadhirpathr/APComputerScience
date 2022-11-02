@@ -8,6 +8,7 @@ class ConvertNumberSystem {
         String binaryNumber = Integer.toBinaryString(numberInput);
         String octalNumber = Integer.toOctalString(numberInput);
         String hexNumber = Integer.toHexString(numberInput);
+        //Result of assignment 3
         System.out.println("The binary representation of " + numberInput + " is " + binaryNumber + ".\n The octal representation of " + numberInput + " is " + octalNumber + ". \n The hexadecimal representation of " + numberInput + " is " + hexNumber + ".");
 
         Scanner input_2 = new Scanner(System.in);
@@ -26,4 +27,5 @@ class ConvertNumberSystem {
         String decimalToOctalString = Integer.toString(decimalToOctal);
         System.out.println("The binary representation of " + octalNumberInput + " is " + binaryToOctal + ". \n The decimal representation of " + octalNumberInput + " is " + decimalToOctalString + ". \n The hexadecimal representatino of " + octalNumberInput + " is " + hexToOctal + ".");
     }
+
 }

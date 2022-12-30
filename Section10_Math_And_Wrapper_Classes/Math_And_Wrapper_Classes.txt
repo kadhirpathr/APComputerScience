@@ -1,0 +1,176 @@
+Unit 2:
+
+1. What are wrapper classes for int, double and boolean.
+2. Create an Integer object that holds value of 2. And print value held in that integer object.
+Integer i = /* create an Integer object that holds integer 2 */
+System.out.println(/* print value hele in object i */);
+3. Print max and min value that an int variable can store.
+System.out.println(/* print min value of int variable */);
+System.out.println(/* print max value of int variable */);
+4. What is the value of i in the following?
+Integer integer = Integer.valueOf(1.0);
+int i = integer.intValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+5. What is the value of i in the following?
+Integer integer = Integer.valueOf(1);
+int i = integer.intValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+6. What is the value of i in the following?
+Integer integer = Integer.valueOf("1");
+int i = integer.intValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+7. What is the value of i in the following?
+Integer integer = Integer.valueOf("1.0");
+int i = integer.intValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+
+8. What is the value of d in the following?
+Double doub = Double.valueOf(1.0);
+double i = doub.doubleValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+9. What is the value of d in the following?
+Double doub = Double.valueOf("1");
+double i = doub.doubleValue();
+        1) 1
+        2) 1.0
+        3) compile error
+        4) runtime error
+10. Print max and min value that a double variable can store.
+System.out.println(/* print min value of double variable */);
+System.out.println(/* print max value of double variable */);
+11. What is the value of b in the following?
+Boolean b = Boolean.valueOf("true")
+        1) true
+        2) false
+12. What is the value of b in the following?
+Boolean b = Boolean.valueOf("True")
+        1) true
+        2) false
+13. What is the value of b in the following? 
+Boolean b = Boolean.valueOf("TRUE")
+        1) true
+        2) false
+14. What is the value of b in the following? 
+Boolean b = Boolean.valueOf("T_junk")
+        1) true
+        2) false
+15. Math class belong to which package
+    java.lang
+    java.base
+    java.util
+    lang
+16. All the methods in Math class are static methods 
+17. Math.abs method, when called with negative integer/double value returns positive integer/double
+18. abs method in Math class is overloaded because it the 2 implementations return double or integer value. - false
+18. abs method in Math class is overloaded because it the 2 implementations take double or integer value as parameters. - true
+19. Which method in Math class can be used to return x to power y
+20. Write java expression to compute x to the power y and assign it to variable z
+21. Write a java expression to generate random value between 1 and 100 (both inclusive) and assign it to integer variable rnd
+22. Write java expression to generate random value between 24 and 67 (both not inclusive) and assign it to integer variable rnd
+23. Write java expression to generate random value between 34.000 and 93.000 (both inclusive) and assign it to double variable rnd. The random numer generated must have 3 decimals.
+
+
+Assignment:
+
+Write a program to generate random value between nn.nnn and mm.mmm for any given n and m
+public class RandomGenerator {
+    double lowerLimit;
+    double upperLimit;
+    public double generateRamdomNumber {
+        //Implement this
+    }
+    //implement main method to create instance of RandomGenerator class and print the random number in the console.
+}
+
+Assignment 1:
+What is autoboxing and auto unboxing? Explain with code examples.
+
+        Autoboxing is the automatic conversion that the Java compiler makes between primitive
+        types and their corresponding object wrapper classes. This includes converting an int to an
+        Integer and a double to a Double.
+
+
+
+Assignment:
+Stage 1:
+In the guessing game, the computer picks a random number from 0-100 and you have to guess it. 
+After each guess, the computer will give you clues like “Too high” or “Too low”. Here’s the pseudocode for the guessing game. 
+Pseudocode is an English description or plan of what your code will do step by step. 
+What’s the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?
+
+1. Choose a random number from 0-100
+2. Get the first guess
+3. Loop while the guess does not equal the random number,
+    If the guess is less than the random number, print out “Too low!”
+    If the guess is greater than the random number, print out “Too high!”
+    Get a new guess (save it into the same variable)
+
+4. Print out something like “You got it!”
+
+State 2: 
+Add a counter variable to count how many guesses the user took and print it out when they guess correctly.
+
+When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? 
+What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, 
+so guessing 50 for the first guess. This is called a divide and conquer or binary search algorithm. 
+If your guess is between 0-100, you should be able to guess the number within 7 guesses. 
+
+Stage 3:
+Another extension to this challenge is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.
+
+For this project, you will need to use the Scanner class 
+
+Skeleton Code:
+import java.util.Scanner;
+
+public class GuessingGame 
+{
+  public static void main(String[] args) 
+  {
+    Scanner scan = new Scanner(System.in);
+   // Choose a random number from 0-100 
+ 
+
+   // Ask the user to guess a number from 0 to 100 
+   // Get the first guess using scan.nextInt();
+ 
+
+   // Loop while the guess does not equal the random number,
+
+     // If the guess is less than the random number, print out "Too low!"
+   
+     // If the guess is greater than the random number, print out "Too high!"
+   
+     // Get a new guess (save it into the same variable)
+   
+
+  // Print out something like "You got it!"
+
+
+  }
+}
+
+
+Submitting the solution:
+1. github repo to use: https://github.com/kadhirpathr/APComputerScience.git
+2. Branch to use: Section9
+4. Name of the class: GuessingGame. 
+5. Folder to use: Section9
+6. Checkin only source code file (do not checkin class file)
+7. Enter "completed" in the assignment and submit (no need to upload or copy the source code)
+

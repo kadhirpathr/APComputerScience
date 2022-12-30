@@ -1,0 +1,715 @@
+1. Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out “0 2 4 6 8 10”?
+int count = 0;
+/* missing loop header */
+{
+    System.out.print(count + " ");
+    count += 2;
+}
+
+Ans: C 
+A. while (count == 10)
+B. while (count < 10)
+C. while (count <= 10)
+D. while (count > 10)
+
+
+
+2. Consider the following code segment. What is count’s value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)
+(use html table when answering this question)
+int count = 1;
+while (count <= 10)
+{
+    count *= 2;
+}
+count = count - 10;
+
+Ans: D
+A. 0
+B. 1
+C. 16
+D. 6
+
+
+3. What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)
+int x = -5;
+while (x < 0)
+{
+   x++;
+   System.out.print(x + " ");
+}
+Ans: C 
+A. 5 4 3 2 1
+B. -5 -4 -3 -2 -1
+C. -4 -3 -2 -1 0
+
+4. The while loop should print out the numbers 1 to 8, but it has 2 errors that cause an infinite loop and an off-by-one error. Can you fix the errors? If you run an infinite loop, you may need to refresh the page to stop it (so make sure all active code windows on the page have been saved and click on Load History after refreshing).
+public class LoopTest2
+{
+   public static void main(String[] args)
+   {
+     int count = 1;
+     while (count < 8)
+     {
+        System.out.println(count);
+     }
+   }
+}
+Ans: 
+public class LoopTest2
+{
+   public static void main(String[] args)
+   {
+     int count = 1;
+     while (count <= 8)
+     {
+        System.out.println(count);
+        count++;
+     }
+   }
+}
+
+5. Here is a for loop that counts from 1 to 5. Change it to count from 2 to 10?
+public class ForLoop
+{
+   public static void main(String[] args)
+   {
+     for(int count = 1; count <= 5; count++)
+     {
+        System.out.println(count);
+     }
+   }
+}
+Ans:
+public class ForLoop
+{
+   public static void main(String[] args)
+   {
+     for(int count = 2; count <= 10; count++) // change initial count
+     {
+        System.out.println(count);
+     }
+   }
+}
+
+
+6. Here is a while loop that counts from 5 to 10. Run it and see what it does. Change it to a for-loop.
+public class ForLoopFromWhile
+{
+   public static void main(String[] args)
+   {
+     int count = 5;
+     while (count <= 10)
+     {
+        System.out.println(count);
+        count++;
+     }
+   }
+}
+Ans:
+public class ForLoopFromWhile
+{
+   public static void main(String[] args)
+   {
+     for (int count=5; count <=10; count++) { 
+        System.out.println(count);         
+     }
+   }
+}
+
+7. What does the following code print?
+for (int i = 3; i < 8; i++)
+{
+   System.out.print(i + " ");
+}
+Ans: D
+A. 3 4 5 6 7 8
+B. 0 1 2 3 4 5 6 7 8
+C. 8 8 8 8 8
+D. 3 4 5 6 7
+
+8. What does the following code print?
+for (int i = 1; i <= 10; i++)
+{
+   System.out.print(i + " ");
+}
+Ans: C
+A. 3 4 5 6 7 8
+B. 0 1 2 3 4 5 6 7 8 9
+C. 1 2 3 4 5 6 7 8 9 10
+D. 1 3 5 7 9
+
+9. How many times does the following method print a *?
+for (int i = 3; i <= 9; i++)
+{
+   System.out.print("*");
+}
+Ans: C
+A. 10
+B. 6
+C. 7
+D. 9
+
+10. Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
+public class ForLoop
+{
+   public static void main(String[] args)
+   {
+     for(int count = 1; count <= 5; count++)
+     {
+        System.out.println(count);
+     }
+   }
+}
+Ans:
+public class ForLoop
+{
+   public static void main(String[] args)
+   {
+     for(int count = 5; count >= 1; count-=2)
+     {
+        System.out.println(count);
+     }
+   }
+}
+
+11. What does the following code print?
+for (int i = 1; i < 7; i++)
+{
+    for (int y = 1; y <= 5; y++)
+    {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+Ans: C
+A. A rectangle of 7 rows with 5 stars per row.
+B. A rectangle of 7 rows with 4 stars per row.
+C. A rectangle of 6 rows with 5 stars per row.
+D. A rectangle of 6 rows with 4 stars per row.
+
+12. What does the following code print?
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 3; j >= 1; j--)
+    {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+Ans: B
+A. A rectangle of 4 rows with 3 star per row.
+B. A rectangle of 5 rows with 3 stars per row.
+C. A rectangle of 4 rows with 1 star per row.
+D. The loops have errors.
+
+13. What are the values of var1 and var2 when the code finishes executing?
+int var1 = 0;
+int var2 = 2;
+while ((var2 != 0) && ((var1 / var2) >= 0))
+{
+   var1 = var1 + 1;
+   var2 = var2 -1;
+}
+Ans: B 
+A. var1 = 1, var2 = 1
+B. var1 = 2, var2 = 0
+C. var1 = 3, var2 = -1
+D. var1 = 0, var2 = 2
+E. The loop will cause a run-time error with a division by zero
+
+14. What are the values of x and y when the code finishes executing?
+int x = 2;
+int y = 5;
+while (y > 2 && x < y)
+{
+   x = x + 1;
+   y = y - 1;
+}
+Ans: E 
+A. x = 5, y = 2
+B. x = 2, y = 5
+C. x = 5, y = 2
+D. x = 3, y = 4
+E. x = 4, y = 3
+
+15. How many times does the following code print a *?
+for (int i = 3; i < 8; i++)
+{
+    for (int y = 1; y < 5; y++)
+    {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+Ans: B
+A. 40
+B. 20
+C. 24
+D. 30
+
+16. What does the following code print?
+for (int i = 2; i < 8; i++)
+{
+    for (int y = 1; y <= 5; y++)
+    {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+Ans: C
+A. A rectangle of 8 rows with 5 stars per row.
+B. A rectangle of 8 rows with 4 stars per row.
+C. A rectangle of 6 rows with 5 stars per row.
+D. A rectangle of 6 rows with 4 stars per row.
+
+17. What does the following print?
+for (int i = 3; i <= 9; i++)
+{
+   for (int j = 6; j > 0; j--)
+   {
+       System.out.print("*");
+   }
+   System.out.println();
+}
+Ans: D
+A. A rectangle of 9 rows and 5 stars per row.
+B. A rectangle of 6 rows and 6 stars per row.
+C. A rectangle of 7 rows and 5 stars per row.
+D. A rectangle of 7 rows and 6 stars per row.
+
+18. Consider the following code segment. How many times is the string “Hi!” printed as a result of executing the code segment?
+int i = 0;
+while (i <= 4)
+{
+  for (int j = 0; j < 3; j++)
+  {
+    System.out.println("Hi!");
+  }
+  i++;
+}
+Ans: A
+A. 15
+B. 12
+C. 10
+D. 8
+
+19. Rewrite the following code to use a while loop instead of a for loop to print out the numbers from 1 to 10 (inclusive).
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int x = 1; x <= 10; x++)
+            System.out.println(x);
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 1;
+        while (x <= 10) {
+            System.out.println(x);
+            x++;
+        }
+    }
+}
+
+20. Rewrite the following code so that it uses a for loop instead of a while loop to print out all the integers from 5 to 15 (inclusive).
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 5;
+        while (x <= 15)
+        {
+            System.out.println(x);
+            x = x + 1;
+        }
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int x=5; x<=15; x++) {
+            System.out.println(x);
+        }       
+    }
+}
+
+21. Rewrite the following code to use a while loop instead of a for loop to print out the numbers from 10 to 100 by 10’s (inclusive).
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int x = 10; x <= 100; x=x+10)
+            System.out.println(x);
+    }
+}
+22.The following code should print the values from 1 to 10 (inclusive) but has errors. Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page in the browser to stop the loop and then click on Load History and move the bar above it to see your last changes.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 1;
+        while (x < 10)
+        {
+            System.out.println(x);
+        }
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 10;
+        while (x <= 100) {
+            System.out.println(x);
+            x += 10;
+        }
+    }
+}
+
+23. The following code should print the values from 10 to 5, but it has errors. Fix the errors so that the code works as intended.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int x = 10; x >= 5; x--)
+        {
+           System.out.println(x);
+           x--;
+        }
+
+    }
+}
+24. The following code should print the values from 10 to 1, but it has errors. Fix the errors so that the code works as intended.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 10;
+        while (x >= 0)
+        {
+           x--;
+           System.out.println(x);
+        }
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        int x = 10;
+        while (x > 0)
+        {
+           System.out.println(x);
+           x--;
+        }
+    }
+}
+
+25. Finish the code below to print a countdown from 100 to 0 by 10’s using a for or while loop.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+
+
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int i=100; i>=0; i-=10) {
+            System.out.println(i);
+        }
+
+    }
+}
+
+
+26. Finish the code to print the value of x and " is even" if x is even and " is odd" if it is odd for all values from 10 to 1.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+
+    }
+}
+27. Finish the code below to print the values for 10 * x where x changes from 0 to 10 using a loop.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int x=10; x>=1; x--) {
+            if (x % 2 == 0)
+                System.out.println(x + " is even");
+            else
+                System.out.println(x + " is odd");
+        }
+    }
+}
+
+28. Finish the following code so that it prints a string message minus the last character each time through the loop until there are no more characters in message. The loop condition should test the length of the message. The loop body should print the message and then use substring to create a new message without the last character.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+           String message = "help";
+
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+           String message = "help";
+           for (int l=message.length(); l>=0; l--) {
+               System.out.println(message.substring(0,l));
+           }
+    }
+}
+
+29. Finish the code to loop printing the message each time through the loop and remove an x from the message until all the x’s are gone.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        String message = "Ix lovex youxxx";
+        System.out.println(message);
+
+
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        String message = "Ix lovex youxxx";
+        System.out.println(message);
+        for (int i=message.indexOf("x"); i>=0; i=message.indexOf("x")) {
+            message = message.substring(0,i) + message.substring(i+1);
+            System.out.println(message);
+        }
+    }
+}
+
+30. Write a loop below to print the number of x’s in the string message. Use the indexOf and substring methods.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        String message = "xyxxzax";
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        String message = "xyxxzax";
+        int i = 0;
+        while (message.indexOf("x") >= 0) {
+            int index = message.indexOf("x");
+            if (index >= 0) {
+                i++;
+                message = message.substring(0,index) + message.substring(index+1);
+            }
+        }
+        System.out.println(i);
+    }
+}
+
+
+31. Write the code below to print a rectangle of stars (*) with 5 rows of stars and 3 stars per row. Hint: use nested for loops.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int i=0; i<5; i++) {
+            for (int j=0; j<3; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+32. Write the code below to print 55555, 4444, 333, 22, 1 with each on a different line.
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+    }
+}
+Ans:
+public class TestLoop
+{
+    public static void main(String[] args)
+    {
+        for (int i=5; i>=1; i--) {
+            for (int j=0; j<i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
+33. What does the following code print?
+for (int i = 3; i <= 12; i++)
+{
+   System.out.print(i + " ");
+}
+Ans: D
+A. 5 6 7 8 9
+B. 4 5 6 7 8 9 10 11 12
+C. 3 5 7 9 11
+D. 3 4 5 6 7 8 9 10 11 12
+
+34. Which of the following code segments will produce the displayed output?
+1
+22
+333
+4444
+55555
+Ans: I
+I.   for (int i = 1; i <= 5; i++) {
+        for (int j = i; j > 0; j--) {
+           System.out.print(i);
+        }
+        System.out.println();
+     }
+
+II.  for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < i; j++) {
+           System.out.print(i);
+        }
+        System.out.println();
+     }
+
+III. for (int i = 1; i < 5; i++) {
+        for (int j = i; j > 0; j--) {
+           System.out.print(i);
+        }
+        System.out.println();
+     }
+
+IV.  for (int i = 1; i < 6; i++) {
+        for (int j = 0; j < i; j++) {
+           System.out.println(i);
+        }
+     }
+
+V.   for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < i; j++) {
+           System.out.print(i+1);
+        }
+        System.out.println();
+     }
+
+35. What is printed as a result of the following code segment?
+for (int k = 0; k < 20; k+=2) {
+   if (k % 3 == 1)
+      System.out.print(k + " ");
+}
+Ans: E
+A. 0 2 4 6 8 10 12 14 16 18
+B. 4 16
+C. 0 6 12 18
+D. 1 4 7 10 13 16 19
+E. 4 10 16
+
+36. Which of the following code segments will produce the displayed output?
+11111
+2222
+333
+44
+5
+
+I.   for (int j = 1; j <= 5; j++) {
+        for (int k = 5; k >= j; k--) {
+           System.out.print(j + " ");
+        }
+        System.out.println();
+     }
+
+II.  for (int j = 1; j <= 5; j++) {
+        for (int k = 5; k >= 1; k--) {
+           System.out.print(j + " ");
+        }
+        System.out.println();
+     }
+
+III. for (int j = 1; j <= 5; j++) {
+        for (int k = 1; k <= j; k++) {
+           System.out.print(j + " ");
+        }
+        System.out.println();
+     }
+
+IV.  for (int j = 1; j <= 5; j++) {
+        for (int k = 1; k <= 5; k++) {
+           System.out.println(j + " ");
+        }
+     }
+
+V.   for (int j = 1; j <= 5; j++) {
+        for (int k = j; k <= 5; k++) {
+           System.out.print(k + " ");
+        }
+        System.out.println();
+     }
+Ans: A 
+A. I
+B. II
+C. III
+D. IV
+E. V
+
+37. Drag the concept on definition
+a loop that has three parts: initialization, condition, and change => for loop
+a loop that repeats while a Boolean condition is true => while loop 
+one loop inside of another => nested loop
+
+38. Drag the concept on definition
+writing down the values of variables for each execution of the loop body => while loop
+the statement of block of statements following a loop header that is repeated => body of a loop
+a loop that never ends => infinite loop
+
+39. How many stars are output when the following code is executed?
+for (int i = 0; i < 5; i++) {
+   for (int j = 0; j < 5; j++)
+      System.out.println("*");
+}
+Ans: C
+A. 10
+B. 5
+C. 25
+D. 50
+E. 15
+

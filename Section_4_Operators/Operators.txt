@@ -1,0 +1,353 @@
+22. Arithmatic Operators
+Select invalid Arithmatic operators from the list below
+  + - * / % _
+What does the statement System.out.println(6/4) print?
+  2
+  1.5
+  1
+% is called ________operator
+what does following code prints ____
+  int x = 1
+  System.out.print(x++)
+The % operator is used to determine the remainder when 2 numbers are divided.
+++ and -- operators are called decrement and increment operators respectively.
+The != operator evaluates if 2 integers are "not equal to" each other.
+the != operator can be used to evaluate if an integer and double variables are "not equal to" each other.
+what does following code prints {1:SHORTANSWER:%100%:1}
+  int x = 1;
+  System.out.print(x++);
+What is the value of y after following code block executes {1:SHORTANSWER:%100%3}
+  int x = 1;
+  int y = x++ + 2;
+  System.out.println("y = " + y);
+What is the value of y after following code block executes {1:SHORTANSWER:%100%4}
+  int x = 1;
+  int y = ++x + 2;
+The following code snippet prints {1:SHORTANSWER:%100%1}
+    int x = 10;
+    System.out.print(x%3);
+
+The device from which input to the system is taken is called {1:SHORTANSWER:%100%:standard input~%100%:stdin}
+Standard input in java is represented by {1:SHORTANSWER:%100%:System.in}
+The device to which output from the system is sent is called {1:SHORTANSWER:%100%:standard output~%100%:stdout}
+Standard output in java is represented by {1:SHORTANSWER:%100%:System.in}
+Arithmatic operators can only be used on any primitive types.
+Arithmatic operators can only be used only on primitive types for numbers.
+Binary operators take two operands to produce a result.
+Unary operators take single operand.
+Select unary operators from the below list.
++ - 1
+*
+- - 2
+%
+++ - 3
+-- - 4
+**
+! - 5
+&
++ and - can be used as both unary and binary operators.
+Select valid expressions from below
+1+2
+1 + 2
++1
++ 1
+** is valid operator in java.
+++ and -- can only be applied to whole number primitive types (int, long, short, byte)
+Select valid assignment operators from below.
++= - 1
+-= - 2
+= - 3
+=+
+*= - 4
+/= - 5
+!=
+%= - 6
+Given int x = 2; int y = 4; select valid expressions from below.
+x += x; - 1
+x -= 1; - 2
+int z = x += y; - 10
+x = y; - 3
+x %= x; - 4
+x %= y; - 5
+x =+ y;
+x *= y; - 6
+x /= x; - 7
+x != y; - 8
+x %= y; - 9
+
+
+Remainder/Modulus operator (%) can only be used on 2 whole numbers.
+Given numeric variable x (x %= x) always sets the value of x to 0.
+Given numeric variable x (x /= x) always sets the value of x to 1.
+
+
+
+Assignment 8: Create a program that prompts the user for 3 different integers. Then multiply the 3
+integers together and display the product.
+Instructions to answering.
+  1. github repo to use: https://github.com/kadhirpathr/APComputerScience.git
+  2. Branch to use: Section3
+  3. Name of the class: Section3.
+  4. Name of the method: assignment8. (this method must be invoked from main to output the results )
+  5. Folder to use: Section3 (e.g: Section3.java must be inside folder Section3)
+  6. Checkin only source code file (do not checkin class file)
+  7. Enter "completed" in the assignment and submit (no need to upload or copy the source code)
+  8. Sample Results.
+      $ java Section3
+      Enter first number > 2
+      Enter second number > 5
+      Enter third number > 10
+      Result: Product of three integers is 100
+
+Assignment 9: Write a program that prints 16th addition table. (first 16 lines)
+16 + 0 = 16
+16 + 1 = 17
+16 + 2 = 18
+...
+...
+16 + 16 = 32
+Instructions to answering.
+  1. github repo to use: https://github.com/kadhirpathr/APComputerScience.git
+  2. Branch to use: Section3
+  3. Name of the class: Section3.(same as Assignment 8)
+  4. Name of the method: addition16. (this method must be invoked from main to output the results )
+  5. Folder to use: Section3 (e.g: Section3.java must be inside folder Section3)
+  6. Checkin only source code file (do not checkin class file)
+  7. Enter "completed" in the assignment and submit (no need to upload or copy the source code)
+
+Assignment 10: Write a program that prints 16th multiplication table. (first 16 lines)
+16 X 1 = 16
+16 X 2 = 32
+16 X 3 = 48
+...
+...
+16 X 16 = 256
+Instructions to answering.
+  1. github repo to use: https://github.com/kadhirpathr/APComputerScience.git
+  2. Branch to use: Section3
+  3. Name of the class: Section3 (same as Assignment 8)
+  4. Name of the method: multiplication16. (this method must be invoked from main to output the results )
+  5. Folder to use: Section3 (e.g: Section3.java must be inside folder Section3)
+  6. Checkin only source code file (do not checkin class file)
+  7. Enter "completed" in the assignment and submit (no need to upload or copy the source code)
+
+25. Relational and Equality Operators.
+Select invalid relational operators from below
+> < >= <= += -=
+Result of relational or equality operator is a boolean value.
+= operator a(n) ________ operator and == operator is a(n) __________ operator
+relational and equality operators can only be used on primitive types.
+In the following the variable y must be declared as what type
+  int a, b = 1;
+  y = a == b;
+
+  int, boolean, double, short
+
+Assignment: Create a program that prompts for 2 different doubles. Then, print true or false for each of the following
+conditions:
+whether number1 is equal to number2, whether number 1 is greater than or equal to number2 and whether number1 is less than number2.
+
+28. Logical and assignment operators
+What is the output of the following code snippet
+  int x += 1;
+1, compile error
+
+What is the output of the following code snippet
+  int x = 0;
+  x += 1;
+1, compile error
+
+The following code snippet prints {1:SHORTANSWER:%100%:2}
+    int x = 20;
+    x %= 3;
+    System.out.print(x);
+
+The following code snippet prints {1:SHORTANSWER:%100%:6}
+    int x = 20;
+    x /= 3;
+    System.out.print(x);
+logical OR operator is {1:SHORTANSWER:%100%:||}
+logical NOT operator is {1:SHORTANSWER:%100%:!}
+logical AND operator is &&, ||, !
+Following expression is
+  x &= y
+  invalid
+  always valid
+  valid only of x and y are declared boolean types
+
+Short circuit AND operator is
+and short circuit OR operator is
+The following code snippet prints {1:SHORTANSWER:%100%:false}
+    int x = 1;
+    int y = 2;
+    System.out.print(x++ < 1 && ++y > 2 );
+What are short circuit logical operators in java. Explain why they are called short circuit logical operators.
+
+Choose correct statement(s) from below - 1
+a. & operator always evaluates both operands, whereas && operator evaluates second operand only if first operand is true (true)
+b. & operator always evaluates both operands, whereas && operator evaluates second operand only if first operand is false
+c. | operator always evaluates both operands, whereas || operator evaluates second operand only if first operand is false (true)
+d. | operator always evaluates both operands, whereas || operator evaluates second operand only if first operand is true
+1. All of the above
+2. a & b
+3. a & c ( correct)
+4. b & d
+5. c & d
+6. None of the above
+
+Choose correct statement(s) from below - 2
+a. & operator always evaluates both operands, whereas && operator evaluates second operand only if first operand is true (true)
+b. & operator always evaluates both operands, whereas && operator evaluates second operand only if first operand is false
+c. | operator always evaluates both operands, whereas || operator evaluates second operand only if first operand is false (true)
+d. | operator always evaluates both operands, whereas || operator evaluates second operand only if first operand is true
+
+
+Choose correct statement(s) from below - 3
+a. && operator always evaluates both operands, whereas & operator evaluates second operand only if first operand is true
+b. && operator always evaluates both operands, whereas & operator evaluates second operand only if first operand is false
+c. || operator always evaluates both operands, whereas | operator evaluates second operand only if first operand is false
+d. || operator always evaluates both operands, whereas | operator evaluates second operand only if first operand is true
+
+
+29: Order or operations:
+1st: !, ++, --
+2nd: *, /, %
+3rd: +, -
+4th: >, >=, <, <=
+5th: ==, !=
+6th: &&
+7th: ||
+8th: =, +=, -=, *=, /=, %=
+1st and 8th are Right to Left
+Rest are from Left to right.
+
+- operator has higher precedence than the % operator - False
+Assignment and unary operators are evaluated from right to left and all other operators are evaluated from left to right. - True
+Arithmatic operators have lower precedence than relational operators - False
+logical AND (&&) operator has higher precedence than logical OR (||) operator. - True
+Given x = 1 and y = 2 value of x,y and z after evaluating following expression is - DONE
+  boolean z = x++ == 1 && y++ == 3
+  2,3,false respectively (correct)
+  2,3,true respectively
+  1,3,false respectively
+  2,2,true respectively
+  1,3,true respectively
+  Feedback
+  1. The expression is short circuit AND, so second expression is evaluated only if necessary.
+  2. In this case, since first operand is evaluated to true, second operand is  evaluated,
+  3. Second operand evaluate to false.
+  3. So the answer is 2,3, false
+Given x = 1 and y = 2 value of x,y and z after evaluating following expression is (2, 2) - DONE
+  boolean z = x++ == 1 || y++ == 3
+  2,2,true respectively (correct)
+  2,3,false respectively
+  2,3,true respectively
+  1,3,false respectively
+  1,3,true respectively
+  Feedback
+  1. The expression is short circuit AND, so second expression is evaluated only if necessary.
+  2. In this case, since first operand evaluates to true, second operand is not evaluated
+  3. So the answer is 2,2,true
+
+Given x = 1 and y = 2 value of x,y and z after evaluating following expression is (2, 2) - DONE
+  boolean z = x++ == 1 & y++ == 3
+  2,3,false respectively (correct)
+  2,3,true respectively
+  1,3,false respectively
+  2,2,true respectively
+  1,3,true respectively
+  Feedback
+  1. This is non short circuit AND operation, so both the expressions are evaluated, so x=2,y=3 always
+  2. First operand evaluates to true and second evaluates to false.
+  3. So the answer is 2,3,false
+
+Given x = 1 and y = 2 value of x,y and z after evaluating following expression is (2, 2) - DONE
+  boolean z = x++ == 1 | y++ == 3
+  2,3,false respectively
+  2,3,true respectively (correct)
+  1,3,false respectively
+  2,2,true respectively
+  1,3,true respectively
+  Feedback
+  1. This is non short circuit OR operation, so both the expressions are evaluated, so x=2,y=3 always
+  2. First operaion evaluates to true
+  3. So the answer is 2,3,true
+The following expressions will result in same value for x,y and z. (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 | y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 | y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 | ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 | ++y == 3
+  Feedback
+  1. All the expressions are not short circuit OR, so both the operands are evaluated. So value of x and y are same, So value of x and y are same, but value of z could be different.
+  2. First expression is true as x=1 (because true | <true/false> is true) => z = true
+  3. Second expression is false as x=2 and y=2 (fales | false is false) => z = false
+  4. So the answer is false
+
+The following expressions will result in same value for x,y and z. (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 || y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 || y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 || ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 || ++y == 3
+  Feedback
+  1. All the expressions are short circuit OR, so x, y and z could be different for each expression (meaning we need to evaluate value of all 3 variables.)
+  2. First expression is true as x=1 (because true | <true/false> is true). Since first operand of short circuit OR is true, second operand is not evaluated. That means x=2,y=2,z=true
+  3. Second expression is false. x=2 during evaluation of first operand, so the result is false. since it is false, second operand is evaluated. y=2 during evaluation of second expression. so the result of second expression is also false, however y++ is evaluated. That means x=2,y=3,z=false
+  4. So the answer is false
+The following expressions will result in same value for x and y (true) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 | y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 | y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 | ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 | ++y == 3
+  Feedback
+  1. All the expressions are not short circuit OR, so both the operands are evaluated. So value of x and y are same.
+  2. So the answer is true
+The following expressions will result in same value for x and y (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 || y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 || y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 || ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 || ++y == 3
+  Feedback
+  1. All the expressions are short circuit OR, so x, y and z could be different for each expression (meaning we need to evaluate value of all 3 variables.)
+  2. First expression is true as x=1 (because true | <true/false> is true). Since first operand of short circuit OR is true, second operand is not evaluated. That means x=2,y=2,z=true
+  3. Second expression is false as x=2 (x incremented before evaluating expression)since it is false, second operand is evaluated. y=2 during evaluation of second expression. so the result of second expression is also false, however y++ is evaluated. That means x=2,y=3,z=false
+  4. So the answer is false
+
+The following expressions will result in same value for x,y and z. (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 & y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 & y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 & ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 & ++y == 3
+  Feedback
+  1. All the expressions are non short circuit AND, so both the operands are evaluated. So value of x and y are same, but value of z could be different.
+  2. First expression, result of first operand is true, second operand is false, so x=2,y=3,z=false
+  3. Second expression, result of first operand is false, so x=2,y=3,z=false
+  4. Third expression, result of first operand is true, second operand is also true, so x=2,y=3,z=true
+  5. Hence, answer is false
+The following expressions will result in same value for x,y and z. (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 && y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 && y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 && ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 && ++y == 3
+  Feedback.
+  1. All the expressions are short circuit AND, so value of x,y and z could be different.
+  2. First expression, first operand is true, second operand is false, so x=2,y=3,z=false
+  3. Second expression, first operand is false, second operand not evaluated, so x=2,y=2,z=false
+  4. So answer is false
+The following expressions will result in same value for x and y (true) - DONE -DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 & y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 & y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 & ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 & ++y == 3
+  Feedback.
+  1. All the expressions are non short circuit AND, so both the operands are evaluated. So value of x and y are same, but value of z could be different.
+  2. So the answer is true
+The following expressions will result in same value for x and y (false) - DONE - DONE
+  1. int x=1; int y=2; boolean z = x++ == 1 && y++ == 3
+  2. int x=1; int y=2; boolean z = ++x == 1 && y++ == 3
+  3. int x=1; int y=2; boolean z = x++ == 1 && ++y == 3
+  4. int x=1; int y=2; boolean z = ++x == 1 && ++y == 3
+  Feedback
+  1. All the expressions are short circuit AND, so value of x,y and z could be different.
+  2. First expression, first operand is true, second operand is false, so x=2,y=3,z=false
+  3. Second expression, first operand is false, second operand is not evaluated, so x=2,y=2,z=false
+  4. So the answer is false.

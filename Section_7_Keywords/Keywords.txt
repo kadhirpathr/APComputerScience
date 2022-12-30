@@ -1,0 +1,41 @@
+https://www.w3schools.com/java/java_ref_keywords.asp
+https://www.w3schools.com/java/java_modifiers.asp
+https://www.w3schools.blog/private-class-in-java
+
+
+48.1 public and private keywords are called access modifiers.
+48.2 Access modifiers control if the variables can be accessed from outside the class
+48.3 keywords are same as reserved words.
+48.4 variables and methods that are defined as private can only be access by methods of that class 
+48.5 private keyword is used to implement "data hiding" Object Oriented Programming priciple
+48.6 static keyword can only be applied to class variables.
+48.7 static variables are same as class variables.
+48.8 static keyword is non-access modifier keyword
+48.9 static methods and variables can be accessed without instantiating a class.
+48.10 The _____ keyword is used when you want to make a class universally accessible.
+48.11 main method is private
+48.12 Static methods can modify instance variables. (False)
+48.13 Static variable can only be accessed and modified by static methods.
+48.14 static variable can be modified instance methods.
+48.15 static keyword can be combined with final keyword when defining variables (e.g: static final int i = 0;)
+48.16 static keyword can be combined with private keyword when defining variables (e.g: static private int i = 0;)
+48.17 static keyword can be combined with final and private keyword when defining variables (e.g: private static final int i;)
+48.18 static keyword can be combined with final and public keyword when defining variables (e.g: public static final int i;)
+48.19 Top level classes in java can be private
+48.20 Classes can be declared private, provided they are inner or nested classes.
+48.21 All the built in data types are subset of keywords in java
+48.22 keywords are reserved in the sense that you can't name the variable names as keywords.
+48.23 What are access modifiers in Java?
+    https://www.w3schools.blog/access-modifier-in-java
+48.24 Select keywords from following
+    private, public, protected, default
+48.25 What are types of access modifiers in java?
+48.26 If you don't explicitly specify any access modifiers to variables and moethods default access modifier applies.
+48.27 If you don't explicitly specify any access modifiers to variables and methods can be accessed by any class that is defined in same package
+48.28 private access modifier restricts access only to subclasses
+48.29 Which access modifier restricts access only to class and it's subclasses.
+48.30 If you apply protected access modifier, the variable/method can be accessed by subclass even if the subclass is defined in another package.
+48.31 Which access modifier restricts access only to class where it is declared.
+
+
+

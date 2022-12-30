@@ -1,0 +1,46 @@
+1. What are ragged arrays in java 
+
+2. Which of the following sets the value for the 3rd row and 2nd column of a 2D array called nums?
+Ans: C
+A. nums[3][2] = 5;
+B. nums[1][2] = 5;
+C. nums[2][1] = 5;
+D. nums[2][3] = 5;
+
+3. What is the value at seatingInfo[2][1] after the code the below executes?
+int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
+Ans: Luke
+
+4. What is the value of name after the code below executes?
+int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
+int value = ticketInfo[1][0];
+String name = seatingInfo[0][1];
+Ans: B
+A. Jamal
+B. Maria
+C. Jake
+D. Suzy
+E. Emma
+
+5. How many rows does a have if it is created as follows int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};?
+Ans: 2
+A. 2
+B. 4
+C. 8
+
+6. Which of the following would I use to get the value in the third row and second column from a 2D array called nums?
+Ans: C
+A. nums[3][2]
+B. nums[2][3]
+C. nums[2][1]
+D. nums[1][2]
+
+7. Drag the concept to the correct description
+The index of the last row => arr.length - 1
+The number of elements in the array => arr.length * arr[0].length
+The index of the item in the first row and first column => arr[0][0]
+The index of the item in the first row and second column => arr[0][1]
+
+8. Drag the concept to the correct description

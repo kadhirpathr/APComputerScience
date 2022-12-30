@@ -1,0 +1,138 @@
+https://www.w3schools.com/java/java_constructors.asp
+https://www.w3schools.com/java/ref_keyword_this.asp#:~:text=The%20this%20keyword%20refers%20to,a%20method%20or%20constructor%20parameter).
+https://www.w3schools.com/java/ref_keyword_super.asp
+https://www.w3schools.com/java/java_methods_overloading.asp
+https://www.w3schools.com/java/java_abstract.asp
+https://www.geeksforgeeks.org/why-a-constructor-can-not-be-final-static-or-abstract-in-java/
+
+
+
+50.1 A method can be declared without specifying access modifier.
+50.2 A method that does not have explicit access modifier assumes "default" access modifier.
+50.3 If an access modifier is present in the method definition, then it must be specified first in the method signature - False 
+    static is non-access modifier and it can come first.
+50.4 If a modifier is present in the method definition, then it must be specified first in the method declaration
+50.5 A method signature may include more than one access modifier - False
+50.6 A method signature may include more than one modifier - True
+50.7 A method may have more than one return type.
+50.8 A single method signature can contain all of the modifiers below - False
+    public, static, final, abstract 
+    final keyword would mean that the method cannot be overridden in subclass
+    abstract keyword would mean that method cannot have anybody and this method must be implemented by the subclasses.
+    So final and abstract would contradict each other. So the answer is false.
+50.9 A method that is declared final can also be declared abstract - False
+    final keyword means that that the method cannot be overridden in the subclass
+    abstract method cannot have body (it is defined so that subclass of the class can provide implementation)
+    so they are mutually exclusive
+50.10 A method that is declared abstract can also be declared private
+    abstract method cannot have body (it is defined so that subclass of the class can provide implementation)
+    private restricts access to the method only to the class, that means it cannot have implementation in the subclass.
+50.11 A method that is declared final can also be declared private - True
+50.12 An abstract method can have following access modifiers except
+    private
+    protected
+    no explicit access modifier
+    private
+50.13 Abstract methods does not have implementation
+50.14 Define an abstract method
+50.15 Define a static method
+50.16 Define a final method
+50.17 A method that is declared as final can also be overloaded.
+50.18 Abstract method can only be defined in abstract class
+50.19 Define abstract class
+54.1 Constructor name is same as Class name
+54.2 A constructtor may be declared private - true
+        constructors can be declared private.
+        Only methods in the class can create the instance of the class. 
+        However, in order to invoke the method you need to have an object that is instance of the class. How is this possible?
+        This means you need ot have a static method that creates the instance (using private constructor) and returns instance of the class.
+        That is a non private static method with return type as class name.
+54.3. A constructor can be declared static - false
+        One of the important property of java constructor is that it can not be static. 
+        We know static keyword belongs to a class rather than the object of a class. 
+        A constructor is called when an object of a class is created, so no use of the static constructor
+54.4. A constructor can be declared final - false
+        One of the important property of java constructor is that it can not be final. 
+        As we know, constructors are not inherited in java. Therefore, constructors are not subject to hiding or overriding
+54.5 Constructors of parent class are inherited in subclass - False
+54.6. Constructors may have return type. - False
+54.7 Constructors are same as instance methods withuout return type - false
+        While constructors can't have a return type, they can't be declared as final or any other non-access modifiers.
+54.8 Define construtor in java
+    A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.
+54.9 A java class can have multiple constructors. - true
+54.10 A java class can have multiple constructors with same parameter types as long as they have different access modifiers (private, public etc.) - false
+54.11 The constructor of class can only set/initialize the values for the class and/or instace variables and is not allowed to do any other computations.
+54.12 If a class does not have any constructor, java creates a default constructor that takes no argument - true
+54.13 If a class is defined with a constructor that takes one argument, java still creates an empty constructor - false
+54.14 Am empty constructor is a constructor that takes no parameters and has empty body.
+        Note that "no body" is not same as "empty body". 
+        For example abstract method has no body, but you can also declare a method with {} (think about what it implies - method return type must be void)
+54.15 A constructor is a method that creates an object of a class.
+55.1 Getter methods are also called accessors
+55.2 Getter methods are used to get value of attributes of the objects
+55.3 The getter and setter methods for static variables must also be declared static
+55.4 Getter method return type may be void
+55.5 getter and setter methods are just like any other methods in java except that they follow naming convention.
+55.6 which of the following keyword is used to create a new object (new/this/super/need not require any keyword/does not require any keyword)
+55.7 What is the function of dot(.) operator in java
+        Dot operator is a syntactic element, i.e. it denotes the separation between class and package, method and 
+        class, variable and reference variable. It can also be called as separator operator. It is mainly used for separating a 
+        variable and method from a reference variable, for accessing class and sub-packages from a package, for accessing any member 
+        of class or package.
+55.8 dot (.) operator is also called member operator because ____________
+        it is used to access member of package or class
+55.9 Which line in the following code will cause compile error (Line 4)
+public class Person {
+    private firstName;
+    public setFirstName(string fn) {
+        firstName = fn; // - Line 1
+        this.firstName = fn; // - Line 2
+    }
+    public setName(String firstName) {
+        this.firstName = firstName // - Line 3
+        firstName = firstName // - Line 4
+    }
+}
+55.10 A method is overloaded when 2 or more methods have same name but different parameters and/or return types - false
+55.11 A method is overloaded when 2 or more methods have same name but different parameters and/or access modifiers - false
+55.12 A method is overloaded when 2 or more methods have same name but different parameters
+55.13 A method is overloaded when 2 or more methods have same name but different return types - false 
+55.14 Following is an example of method overloading - True
+public class Person {
+    private firstName;
+    public setFirstName(string fn) {
+        this.firstName = fn;
+    }
+    public setFirstName() {
+        this.firstName = "Kadhir";
+    }
+}
+55.14 Following is an example of method overloading - True
+public class Append {
+    public static String append(int i, int j) {
+        return String.valueOf(i) + String.valueOf(j)
+    }
+    public static String apend(String s1, String s2) {
+        return s1 + s2;
+    }
+    public static String apend(String s1, int i1) {
+        return s1 + String.valueOf(i1);
+    }
+}
+55.15 Following is an example of method overloading - True
+public class Round {
+    public static long round(int i) {
+        return Math.round(i);
+    }
+    public static long round(float i) {
+        return Math.round(i);
+    }        
+    public static long round(short i) {
+        return Math.round(i);
+    }
+}
+55.16 setter methods may take more than one argument - false
+55.17 getter method may take an argument - false
+55.18 setter method takes exactly one argument - true
+55.19 Return type of a setter method must be void - true

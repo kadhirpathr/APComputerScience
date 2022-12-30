@@ -1,0 +1,474 @@
+1. Drag the boolean expression and drop it on what it is testing
+x > 0 => x is positive
+x >= y => x is greater than or equal to y
+x > y => x is greater than y
+x == y => x equals y
+x != y => x does not equal y
+x < 0 => x is negative
+x < y => x is less than y
+
+2. Consider the following code segment. Why does it always print “ERROR”?
+int x = 3;
+if (x < 2) ;
+{
+    System.out.println("ERROR");
+}
+Ans: B
+A. Because x < 2 is always true
+B. Because there is a semicolon ; at the end of the condition "if (x < 2) ;"
+C. Because Java makes a random decision
+
+3. Following code will compile successfulyly - true
+public class Test {
+  public static final void main(String[] args) {
+    int x = 3;
+    if (x < 2) ;
+  }
+}
+
+4. What is printed when the following code executes and x has been set to 3 and y has been set to 9?
+if (x > 0 && (y / x) == 3)
+{
+   System.out.println("first case");
+}
+else
+{
+   System.out.println("second case");
+}
+A. first case
+B. second case
+
+5. What is printed when the following code executes and x has been set to 0 and y to 3?
+    if (x > 0 && (y / x) == 3)
+    {
+    System.out.println("first case");
+    }
+    else
+    {
+    System.out.println("second case");
+    }
+Ans: B 
+A. first case
+B. second case
+C. You will get a error because you can't divide by zero.
+
+6. What is printed when the following code executes and x has been set to zero and y is set to 3?
+if (x == 0 || (y / x) == 3)
+{
+   System.out.println("first case");
+}
+else
+{
+   System.out.println("second case");
+}
+Ans: A
+A. first case
+B. second case
+C. You will get a error because you can't divide by zero.
+
+7. What is printed when the following code executes and x has been set to zero and y is set to 3?
+if ((y / x) == 3 || x == 0 )
+{
+   System.out.println("first case");
+}
+else
+{
+   System.out.println("second case");
+}
+Ans: C 
+A. first case
+B. second case
+C. You will get a error because you can't divide by zero
+
+8. What is printed when the following code executes and x equals 4 and y equals 3?
+int x = 4, y = 3;
+if (!(x < 3 || y > 2))
+{
+   System.out.println("first case");
+}
+else
+{
+   System.out.println("second case");
+}
+Ans: B
+A. first case
+B. second case
+
+9. What is printed when the following code executes and x equals 4 and y equals 3?
+int x = 4, y = 3;
+if (!(x < 3 && y > 2))
+{
+   System.out.println("first case");
+}
+else
+{
+   System.out.println("second case");
+}
+A. first case
+B. second case
+
+10. Assume x is an integer value and complete a truth table for the boolean expression: !(x == 0 || x >= 1).
+11. Assume x is an integer value and complete a truth table for the boolean expression: !(x == 0) && !(x >= 1)
+12. Assume x is an integer value and complete a truth table for the boolean expression: (x != 0) && (x < 1)
+13. Explain two-way selection using flow chart, pseudo code and how will you implement it in Java
+14. Explain multi-way selection  using flow chart, pseudo codeand how will you implement it in Java
+15. Explain the short circuited evaluation of logical expressions. And give some examples.
+16. Which of the following is the same as the code below?
+!(x > 2 && y < 4)
+Ans: C
+A. (x < 2) || (y > 4)
+B. (x < 2) && (y > 4)
+C. (x <= 2) || (y >= 4)
+D. (x <= 2) && (y >= 4)
+
+17. Which of the following is the same as the code below?
+!(x == 2 && y > 4)
+Ans: D 
+A. (x != 2) || (y < 4)
+B. (x != 2) && (y < 4)
+C. (x != 2) && (y <= 4)
+D. (x != 2) || (y <= 4)
+
+18. Which of the following is the same as the code below?
+!(x!=5 && y!=7)
+Ans: A
+A. (x == 5) || (y == 7)
+B. (x == 5) && (y == 7)
+C. (x != 5) || (y != 7)
+D. (x < 5) || (x > 5) || (y > 7) || (y < 7)
+
+19. Which of the following is the same as the code below?
+!(x<= 5 && y > 7)
+Ans: D
+A. (x > 5) && (y < 7)
+B. (x > 5) || (y < 7)
+C. (x > 5) && (y <= 7)
+D. (x > 5) || (y <= 7)
+
+20. Which of the following best describes the value of the Boolean expression: 
+a && !(b || a)
+Ans: B
+A. The value is always true.
+B. The value is always false.
+C. The value is true when a has the value false, and is false otherwise.
+D. The value is true when b has the value false, and is false otherwise.
+E. The value is true when either a or b has the value true, and is false otherwise.
+
+21. Which of the following is true after the code executes?
+String s1 = new String("hi");
+String s2 = new String("bye");
+String s3 = new String("hi");
+s2 = s1;
+Ans: B 
+A. s1 == s2 && s1 == s3
+B. s1 == s2 && s1.equals(s3)
+C. s1 != s2 && s1.equals(s3)
+
+22. Which of the following is true after the code executes?
+String s1 = new String("hi");
+String s2 = new String("bye");
+String s3 = new String("hi");
+Ans: C
+A. s1 == s2 && s1 == s3
+B. s2.equals(s3) && s1.equals(s3)
+C. s1 != s3 && s1.equals(s3)
+
+23. Which of the following is true after the code executes?
+String s1 = new String("hi");
+String s2 = new String("bye");
+String s3 = new String("hi");
+Ans: C
+A. s1 == s3 && s1.equals(s3)
+B. s2.equals(s3) && s1.equals(s3)
+C. !(s1 == s2) && !(s1 == s3)
+
+24. What will the following code print out? Trace through the code by drawing table/diagrams of what is going on in memory like the figures above, and then show the values of s1, s2, s3, s4 and the output after each line of code. Remember that you can use trace tables to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column in a table and keep track of its value throughout the program as you go through it line by line.
+String s1 = null;
+String s2 = new String("hi");
+String s3 = new String("hi");
+String s4 = new String("bye");
+if (s1 == null)
+    s1 = s2;
+if (s1 == s2)
+   System.out.println("s1 and s2 refer to the same object");
+if (s2 == s3)
+   System.out.println("s2 and s3 refer to the same object");
+if (s3 == s4)
+   System.out.println("s3 and s4 refer to the same object");
+if (s1.equals(s2) && s2.equals(s3))
+    System.out.println("s1, s2, s3 are equal");
+
+25. Drag the concept on to the definition.
+joins two conditions and it will only be true if both of the conditions are true => logical and
+an expression that is either true of false => Boolean expression 
+used to execute code only when Boolean condition is true => conditional 
+a conditional with two or more conditions joined together with logical ands or ors => complex conditional
+
+26. Drag the concept on to the definition.
+used to distribute a negation on a complex conditional => DeMorgan's Laws
+used to execute code when one of the two conditions is true => logical or
+used to start a conditional execute code if a condition is true => if
+one or more statements enclosed in a open curly brace and a close curly brace => blocks of statements
+
+27. The following code should print x is greater than 0. However, the code has errors. Fix the code so that it compiles and runs correctly. Run the program several times with different values of x to test both if and else branches.
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int x = 3;
+        if (x > 0
+            System.out.println("x is greater than 0")
+        else
+            System.out.println(x is less than or equal 0");
+    }
+}
+Ans:
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int x = 3;
+        if (x > 0) //missing parenthesis )
+            System.out.println("x is greater than 0"); //missing semi colon (;)
+        else
+            System.out.println("x is less than or equal 0"); //missing double quote (")
+    }
+}
+
+28. The following code should generate a random number and print if it is evenly divisible by 2. However, the code has an error and always prints “Your number is even”, even if the random number is odd. Fix the code so that it only prints the message when the number is even.
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int num = (int) (Math.random() * 10);
+        System.out.println(num);
+        if (num % 2 == 0) ;
+        {
+            System.out.println("Your number is even");
+        }
+    }
+}
+Ans:
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int num = (int) (Math.random() * 10);
+        System.out.println(num);
+        if (num % 2 == 0) // remove the semicolon
+        {
+            System.out.println("Your number is even");
+        }
+    }
+}
+
+29. The following code should check your guess against the answer and print that it is too low, correct, or too high. However, the code has errors. Fix the code so that it compiles and runs correctly.
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int guess = 7;
+        int answer = 9;
+        if guess < answer)
+            System.out.println("Your guess is too low);
+        else if (guess = answer)
+            System.out.println("You are right!");
+        else
+            System.println("Your guess is too high");
+    }
+}
+
+Ans:
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int guess = 7;
+        int answer = 9;
+        if (guess < answer) // missing parenthesis 
+            System.out.println("Your guess is too low"); //missing " at the end of the string literal
+        else if (guess == answer) //was using assignment instead of equality operator
+            System.out.println("You are right!");
+        else
+            System.out.println("Your guess is too high"); // wrong method (missing out) to print the output
+    }
+}
+
+30. The following code should print “You can go out” if you have done your homework and cleaned your room. However, the code has errors. Fix the code so that it compiles and runs correctly.
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        boolean doneHomework = True;
+        boolean cleanedRoom = true;
+        if (doneHomework && cleanedRoom)
+             System.out.println("You cannot go out");
+        else
+            System.out.println("You can go out");
+    }
+}
+Ans: 
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        boolean doneHomework = true; // Change True to true`
+        boolean cleanedRoom = true;
+        if (doneHomework && cleanedRoom)
+             System.out.println("You can go out"); // change cannot to cannot to can
+        else
+            System.out.println("You cannot go out"); //change can to cannot
+    }
+}
+
+31. What does the following code print when x has been set to 187?
+if (x < 0)
+{
+   System.out.println("x is negative");
+}
+else if (x == 0)
+{
+    System.out.println("x is zero");
+}
+else
+{
+    System.out.println("x is positive");
+}
+Ans: C 
+A. x is negative
+B. x is zero
+C. x is positive
+
+32. What is printed when the following code executes and x equals 4 and y equals 3?
+if (!(x < 3 || y > 2))
+   System.out.println("first case");
+else
+   System.out.println("second case");
+Ans: B
+A. first case
+B. second case
+
+33. What is the value of grade when the following code executes and score is 80?
+if (score >= 90) grade = "A";
+if (score >= 80) grade = "B";
+if (score >= 70) grade = "C";
+if (score >= 60) grade = "D";
+else grade = "E";
+Ans: D
+A. A
+B. B
+C. C
+D. D
+E. E
+
+34. What is printed when the following code executes and x has been set to zero and y is set to 3?
+if (x > 0 || (y / x) == 3)
+   System.out.println("first case");
+else
+   System.out.println("second case");
+Ans: C 
+A. first case
+B. second case
+C. You will get a error because you can't divide by zero.
+
+35. Which of the following expressions is equivalent to !(c || d) ?
+Ans: A
+A. (!c) && (!d)
+B. (c || d)
+C. (c && d)
+D. !(c && d)
+E. (!c) || (!d)
+
+36. Which of the following is equivalent to the code segment below?
+if (x > 2)
+   x = x * 2;
+if (x > 4)
+   x = 0;
+Ans: C 
+A. x = 0;
+B. if (x > 2) x *= 2;
+C. if (x > 2) x = 0;
+D. if (x > 2) x = 0; else x *= 2;
+
+37. Which of the following is equivalent to the code segment below?
+if (x > 0)
+   x = -x;
+if (x < 0)
+   x = 0;
+A. x = 0;
+B. if (x > 0) x = 0;
+C. if (x < 0) x = 0;
+D. if (x > 0) x = -x; else x = 0;
+E. if (x < 0) x = 0; else x = -1;
+
+38. At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 is a B, 75 to 83 is a C, and below 75 is an F. Which of the following code segments will assign the correct string to grade for a given integer score?
+I.   if (score >= 93)
+        grade = "A";
+     if (score >= 84 && score <=92)
+        grade = "B";
+     if (score >=75 && score <= 83)
+        grade = "C";
+     if (score < 75)
+        grade = "F";
+
+II.  if (score >= 93)
+        grade = "A";
+     if (score >= 84)
+        grade = "B";
+     if (score >=75)
+        grade = "C";
+     if (score < 75)
+        grade = "F";
+
+III. if (score >= 93)
+        grade = "A";
+     else if (score >= 84)
+        grade = "B";
+     else if (score >=75)
+        grade = "C";
+     else
+        grade = "F";
+Ans: A
+A. I and III only
+B. II only
+C. III only
+D. I and II only
+E. I, II, and III
+
+39. Assuming that x and y have been declared as valid integer values, which of the following is equivalent to this statement?
+(x > 15 && x < 18) || (x > 10 || y < 20)
+Ans: C 
+A. (x > 15 && x < 18) && (x > 10)
+B. (y < 20) || (x > 15 && x < 18)
+C. ((x > 10) || (x > 15 && x < 18)) || (y < 20)
+D. (x < 10 && y > 20) && (x < 15 || x > 18)
+
+40. What would the following print?
+int x = 3;
+int y = 2;
+if (x > 2)
+   x++;
+if (y > 1)
+   y++;
+if (x > 2)
+   System.out.print("first ");
+if (y < 3)
+   System.out.print("second ");
+System.out.print("third");
+A. first
+B. first second
+C. first second third
+D. first third
+E. third
+
+41. What would the following print?
+int x = 3;
+int y = 2;
+if (y / x > 0)
+   System.out.print("first ");
+   System.out.print("second ");
+Ans: B 
+A. first
+B. second
+C. first second
+D. Nothing will be printed

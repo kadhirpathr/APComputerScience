@@ -1,0 +1,1056 @@
+1. Which of the following creates an array of 10 doubles called prices?
+Ans: B
+A. int[] prices = new int[10];
+B. double[] prices = new double[10];
+C. double[] prices;
+D. double[10] prices = new double[];
+
+2. Which index is for the last element of an array called highScores?
+Ans: B
+A. highScores.length
+B. highScores.length - 1
+
+3. At what index do you find the first element of an array?
+Ans: A
+A. 0
+B. 1
+
+4. Fill in the blank with code to access the cars array.
+String[] cars = {“Honda”, “Volvo”, “BMW”};
+// Access cars array to get Volvo
+String v =  ________
+
+5. Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box.
+String[] cars = {“Honda”, “Volvo”, “BMW”};
+// Set the first item of the cars array to be Toyota
+________ = “Toyota”;
+
+6. Create 4 parallel arrays and intialize them using initialization lists that represent the data below. Remember that the order of these arrays has to match so that you can use the same index and get corresponding values out.
+
+Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
+
+Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
+
+Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
+
+Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
+
+Choose a random number using Math.random() and the length of one of the arrays and save it in a variable called index.
+
+Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the printHTMLimage method has been given to get the image URL online and print it out as an HTML image.
+public class Countries
+{
+  public static void main(String[] args)
+  {
+     // 1. Declare 4 arrays and initialize them to the given values.
+     // Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
+     // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
+     // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
+     // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
+
+     // 2. Pick a random number up to the length of one of the arrays and save in the variable index
+
+     // 3. Print out the info in each array using the random index
+
+     // Sample image printing - this will only work in Active Code
+     // printHTMLimage( images[index] );
+
+   }
+
+   // This method will just work in Active Code which interprets html
+   public static void printHTMLimage(String filename)
+   {
+     String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
+     System.out.print("<img src=" + baseURL + filename + ">");
+   }
+  }
+Ans:
+public class Countries
+{
+  public static void main(String[] args)
+  {
+     // 1. Declare 4 arrays and initialize them to the given values.
+     // Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
+      String[] countries = {"China", "Egypt", "France", "Germany", "India", "Japan", "Kenya", "Mexico", "United Kingdom", "United States"};
+     // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
+      String[] capitals = {"Beijing", "Cairo", "Paris", "Berlin", "New Delhi", "Tokyo", "Nairobi", "Mexico City", "London", "Washington D.C."};
+     // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
+      String[] languages = {"Chinese", "Arabic", "French", "German", "Hindi", "Japanese", "Swahili", "Spanish", "English", "English"};
+     // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
+      String images[] = {"China.jpg", "Egypt.jpg", "France.jpg", "Germany.jpg", "India.jpg", "Japan.jpg", "Kenya.jpg", "Mexico.jpg", "UK.jpg", "US.jpg"};
+
+     // 2. Pick a random number up to the length of one of the arrays and save in the variable index
+     int index = (int) (Math.random() * (countries.length - 0 + 1));
+
+     // 3. Print out the info in each array using the random index
+      System.out.println(countries[index]);
+      System.out.println(capitals[index]);
+      System.out.println(languages[index]);
+      System.out.println(images[index]);      
+
+     // Sample image printing - this will only work in Active Code
+     printHTMLimage( images[index] );
+
+   }
+
+   // This method will just work in Active Code which interprets html
+   public static void printHTMLimage(String filename)
+   {
+     String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
+     System.out.print("<img src=" + baseURL + filename + ">");
+   }
+  }
+  
+7. Given the following code segment what will be returned when you execute: getIndexOfLastElementSmallerThanTarget(values,-13);
+int[ ] values = {-20, -15, 2, 8, 16, 33};
+public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int compare)
+{
+   for (int i = values.length - 1; i >=0; i--)
+   {
+      if (values[i] < compare)
+         return i;
+   }
+   return -1; // to show none found
+}
+Ans: C
+A. -1
+B. -15
+C. 1
+D. You will get an out of bounds error.
+
+8. Given the following code segment what will be returned when you execute: getIndexOfLastElementSmallerThanTarget(values, 7);
+int[ ] values = {-20, -15, 2, 8, 16, 33};
+public static int getIndexOfLastElementSmallerThanTarget(int[] values, int compare)
+{
+   for (int i = values.length; i >=0; i--)
+   {
+      if (values[i] < compare)
+         return i;
+   }
+   return -1; // to show none found
+}
+Ans: D
+A. -1
+B. 1
+C. 2
+D. You will get an out of bounds error.
+
+9. Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast(a)?
+int[ ] a = {-20, -15, 2, 8, 16, 33};
+public static void doubleLast(int[] values)
+{
+
+   for (int i = values.length / 2; i < values.length; i++)
+   {
+      values[i] = values[i] * 2;
+   }
+}
+Ans: C
+A. {-40, -30, 4, 16, 32, 66}
+B. {-40, -30, 4, 8, 16, 32}
+C. {-20, -15, 2, 16, 32, 66}
+D. {-20, -15, 2, 8, 16, 33}
+
+10. Given the following values of a and the method mystery what will the values of a be after you execute: mystery(a)?
+int[] a = {-20, -15, 2, 8, 16, 33};
+public static void mystery(int[] values)
+{
+
+   for (int i = 0; i < values.length/2; i+=2)
+   {
+      values[i] = values[i] * 2;
+   }
+}
+Ans: D
+A. {-40, -30, 4, 16, 32, 66}
+B. {-40, -30, 4, 8, 16, 33}
+C. {-20, -15, 2, 16, 32, 66}
+D. {-40, -15, 4, 8, 16, 33}
+E. {-40, -15, 4, 8, 32, 33}
+
+11. Which of the following loop headers will cause an ArrayIndexOutOfBounds error while traversing the array scores?
+Ans: C & E
+A. for (int i = 0; i < scores.length; i++)
+B. for (int i = 1; i < scores.length; i++)
+C. for (int i = 0; i <= scores.length; i++)
+D. for (int i = 0; scores.length > i; i++)
+E. for (int i = scores.length - 1; i >= 0; i++)
+
+12. The following code has an ArrayIndexOutOfBoundsException. It has 2 common off-by-one errors in the loop. Can you fix it and make the loop print out all the scores?
+public class OffByone
+{
+   public static void main(String[] args)
+   {
+       int[] scores = { 10, 9, 8, 7};
+       // Make this loop print out all the scores!
+       for (int i = 1; i <= scores.length; i++)
+       {
+            System.out.println(  scores[i] );
+       }
+   }
+ }
+Ans:
+public class OffByone
+{
+   public static void main(String[] args)
+   {
+       int[] scores = { 10, 9, 8, 7};
+       // Make this loop print out all the scores!
+       for (int i = 0; i < scores.length; i++) //change initializer and the check
+       {
+            System.out.println(  scores[i] );
+       }
+   }
+ }
+
+13. What is wrong with the code below? The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string. If they have the same characters in the same order it will return 0, otherwise it will return -1. But, it has only processed one element of the array. How would you fix the code to work correctly (process all array elements before returning)?
+public class StringWorker
+{
+
+   public static int findString(String target, String[] arr)
+   {
+     String word = null;
+     for (int index = 0; index < arr.length; index++)
+     {
+       word = arr[index];
+
+       if (word.equals(target))
+       {
+         return index;
+       }
+       else
+       {
+         return -1;
+       }
+     }
+     return -1;
+   }
+
+   public static void main(String[] args)
+   {
+     String[] arr = {"Hello", "Hey", "Good morning!"};
+     System.out.println(findString("Hey", arr));
+   }
+}
+Ans: 
+public class StringWorker
+{
+
+   public static int findString(String target, String[] arr)
+   {
+     String word = null;
+     for (int index = 0; index < arr.length; index++)
+     {
+       word = arr[index];
+
+       if (word.equals(target))
+       {
+         return index;
+       }
+     }
+     return -1;
+   }
+
+   public static void main(String[] args)
+   {
+     String[] arr = {"Hello", "Hey", "Good morning!"};
+     System.out.println(findString("Hey", arr));
+   }
+}
+
+14. Given the following code segment, which of the following will cause an infinite loop? Assume that temp is an int variable initialized to be greater than zero and that a is an array of integers.
+for ( int k = 0; k < a.length; k++ )
+{
+   while ( a[ k ] < temp )
+   {
+      a[ k ] *= 2;
+   }
+}
+A. The values don't matter this will always cause an infinite loop.
+B. Whenever a includes a value that is less than or equal to zero.
+C. Whenever a has values larger then temp.
+D. When all values in a are larger than temp.
+E. Whenever a includes a value equal to temp.
+
+15. The following Code uses a dictionary array of the most common 100 English words. We can use it as a spelling checker! More realistic 
+applications would have huge dictionary of English words read in from a file and lets you do input with your spell checker.
+
+Write a print10() method that takes an array as a parameter and prints out the first 10 words of the array.
+
+Write a spellcheck() method that takes a word and an array as parameters and returns true if the word is in the array. 
+It should return false if it is not found.  This algorithm is called a linear search where we step through the array one element 
+at a time (here the dictionary one word at a time) looking for a certain element.
+
+Write a method printStartsWith(String firstLetters, String[] dictionary) that prints out the words in the dictionary array that 
+start with the characters in the word firstLetters. You could use the Java String startsWith() method here if you’d like to, or use 
+indexOf() to see if the firstLetters is at index 0 of the string.
+public class SpellChecker
+{
+
+   /* 1. Write a print10() method that takes an array as a parameter and prints out the first
+    * 10 words of the array.
+    */
+
+   /* 2. Write a spellcheck() method that takes a word and an array as
+    * parameters  and returns true if the word is in the array.
+    * Return false if it is not found.
+    */
+
+   public static void main(String[] args)
+   {
+     String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
+
+     /* Uncomment to test Part 1
+     print10(dictionary);
+         */
+
+         /* Uncomment to test Part 2
+     String word = "catz";
+     if (spellcheck(word, dictionary) == true)
+         {
+         System.out.println(word + " is spelled correctly!");
+     }
+     else
+         {
+         System.out.println(word + " is misspelled!");
+         }
+     */
+
+     // 3. optional and not autograded
+     // printStartsWith("a", dictionary);
+   }
+}
+Ans:
+public class SpellChecker
+{
+
+   /* 1. Write a print10() method that takes an array as a parameter and prints out the first
+    * 10 words of the array.
+    */
+    public static void print10(String[] words) 
+    {
+        if (words == null) return;
+        for (int i=0; i<10; i++) 
+        {
+            System.out.println(words[i]);
+        }
+    }
+
+   /* 2. Write a spellcheck() method that takes a word and an array as
+    * parameters  and returns true if the word is in the array.
+    * Return false if it is not found.
+    */
+    public static boolean spellcheck(String word, String[] words)
+    {
+        if (word == null) return false;
+        if (words == null) return false;
+        for (int i=0; i<words.length; i++) 
+        {
+            if (word.equals(words[i]))
+                return true;
+        }
+        return false;
+        
+    }
+    public static void printStartsWith(String word, String[] words)
+    {
+        if (word == null) return;
+        if (words == null) return;
+        for (int i=0; i<words.length; i++)
+        {
+            if (words[i].indexOf(word) == 0)
+            {
+                System.out.println(words[i]);
+            }
+        }
+    }
+
+   public static void main(String[] args)
+   {
+     String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
+
+     /* Uncomment to test Part 1
+     print10(dictionary);
+         */
+     print10(dictionary);       
+
+         /* Uncomment to test Part 2 */
+     String word = "catz";
+     if (spellcheck(word, dictionary) == true)
+         {
+         System.out.println(word + " is spelled correctly!");
+     }
+     else
+         {
+         System.out.println(word + " is misspelled!");
+         }
+     
+
+     // 3. optional and not autograded
+      printStartsWith("a", dictionary);
+   }
+}
+
+16. Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
+public class EvenLoop
+{
+   public static void main(String[] args)
+   {
+     int[ ] values = {6, 2, 1, 7, 12, 5};
+     // Rewrite this loop as a for each loop and run
+     for (int i=0; i < values.length; i++)
+     {
+       if (values[i] % 2 == 0)
+           System.out.println(values[i] + " is even!");
+     }
+   }
+}
+Ans:
+public class EvenLoop
+{
+   public static void main(String[] args)
+   {
+     int[ ] values = {6, 2, 1, 7, 12, 5};
+     for (int v: values)
+     {
+         if (v % 2 == 0)
+             System.out.println(v + " is even!");
+     }
+   }
+}
+
+17. What are some of the reasons you would use an enhanced for-each loop instead of a for loop?
+I: If you wish to access every element of an array.
+II: If you wish to modify elements of the array.
+III: If you wish to refer to elements through a variable name instead of an array index.
+Ans: B
+A. Only I.
+B. I and III only.
+C. II and III only.
+D. All of the Above.
+
+18. What is the output of the following code segment?
+int[ ] numbers = {44, 33, 22, 11};
+for (int num : numbers)
+{
+    num *= 2;
+}
+for (int num : numbers)
+{
+    System.out.print(num + " ");
+}
+Ans: A
+A. 44 33 22 11
+B. 46 35 24 13
+C. 88 66 44 22
+D. The code will not compile.
+
+19. Write a program to find average of the elements in an integer array using 
+    a) indexed for loop
+    b) for each loop 
+Ans: 
+1. two static methods using for loop and for each loop.
+2. make sure that total is cast to double (otherwise the result will be integer)
+3. main method with correct signature that invokes the methods
+4. Each statement is terminated with ;
+5. pre-condition verified
+public class Average {
+    public static void calculateAverageForLoop(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int total = 0;
+        for (int i=0; i<array.length; i++) {
+            total += array[i];
+        }
+        double average = (double)total / array.length;
+        System.out.println("Average is = " + average);
+    }
+     public static void calculateAverageForEachLoop(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int total = 0;
+        for (int v: array) {
+            total += v;
+        }
+        double average = (double)total / array.length;
+        System.out.println("Average is = " + average);
+    }   
+    public static void main(String[] args) {
+        int[] iArray = {1,2,3,4,5};
+        calculateAverageForLoop(iArray);
+        calculateAverageForEachLoop(iArray);
+    }
+}
+
+20. Write a program to find largest value in an integer array using 
+    a) indexed for loop
+    b) for each loop 
+Ans: 
+1. two static methods using for loop and for each loop.
+2. make sure that total is cast to double (otherwise the result will be integer)
+3. main method with correct signature that invokes the methods
+4. Each statement is terminated with ;
+5. pre-condition verified
+public class Largest {
+    public static void findLargestForLoop(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int largest = array[0];
+        for (int i=1; i<array.length; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+        }
+        System.out.println("Largest is = " + largest);
+    }
+     public static void findLargestForEachLoop(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int largest = array[0];
+        for (int v: array) {
+            if (v > largest) {
+                largest = v;
+            }
+        }
+        System.out.println("Largest is = " + largest);
+    }   
+    public static void main(String[] args) {
+        int[] iArray = {1,2,3,4,5};
+        findLargestForLoop(iArray);
+        findLargestForEachLoop(iArray);
+    }
+}
+
+21. Given that array is an array of integers and target is an integer value, which of the following best describes the conditions under which the following code segment will return true?
+boolean temp = false;
+for (int val : array)
+{
+  temp = ( target == val );
+}
+return temp;
+Ans:
+A. Whenever the first element in array is equal to target.
+B. Whenever array contains any element which equals target.
+C. Whenever the last element in array is equal to target.
+D. Whenever only 1 element in array is equal to target.
+
+22. Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
+public class SpellChecker
+{
+   // Re-write the spellcheck(word, dictionary) (and optionally the printStartsWith(firstLetters, dictionary)) methods to use enhanced for-each loops.
+
+
+
+   public static void main(String[] args)
+   {
+     String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
+
+     /* Uncomment to test your method
+     String word = "catz";
+     if (checker.spellcheck(word, dictionary) == true)
+         System.out.println(word + " is spelled correctly!");
+     else
+         System.out.println(word + " is misspelled!");
+     */
+
+    // Optional (not autograded)
+    // checker.printStartsWith("a", dictionary);
+   }
+}
+Ans:
+public class SpellChecker
+{
+   // Re-write the spellcheck(word, dictionary) (and optionally the printStartsWith(firstLetters, dictionary)) methods to use enhanced for-each loops.
+    public boolean spellcheck(String word, String[] dictionary) {
+        if (word == null || dictionary == null || dictionary.length == 0) 
+            return false;
+        for (String w: dictionary) {
+            if (w.equals(word)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+   public static void main(String[] args)
+   {
+     String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
+
+     SpellChecker checker = new SpellChecker();
+     /* Uncomment to test your method */
+     String word = "catz";
+     if (checker.spellcheck(word, dictionary) == true)
+         System.out.println(word + " is spelled correctly!");
+     else
+         System.out.println(word + " is misspelled!");
+     
+
+    // Optional (not autograded)
+    // checker.printStartsWith("a", dictionary);
+   }
+}
+
+23. Drag the concept to the correct description 
+1 => Index of the second element 
+length - 1 => The index of the last element
+length => The number of elements in the array 
+0 => The index of the first element 
+int[] nums; => Declare an interger array named nums 
+String[] list1 = {"a", "b", "c"}; => Initialize a String array named listl to contain the first 3 letters of the alphabet as seperate strings 
+String[] list1 = new String[3]; => Declare and create a String array named list1 that can hold 3 elements 
+int[] nums = {1,2,3}; => Initialize an array of integers named nums to contain the first 3 whole numbers
+
+24. Fix the following code so that it prints every other value in the array arr1 starting with the value at index 0.
+public class Test
+{
+    public static void main(String[] args)
+    {
+        int arr1 = {1, 3, 7, 9, 15, 17};
+        for (int index = 0; index <= arr1.length; index+=2)
+        {
+            System.out.print(index + ", ");
+        }
+    }
+}
+Ans: 
+public class Test
+{
+    public static void main(String[] args)
+    {
+        int[] arr1 = {1, 3, 7, 9, 15, 17};
+        for (int index = 0; index < arr1.length; index++)
+        {
+            System.out.print(index + ", ");
+        }
+    }
+}
+
+25. Fix the following to print the values in the array a1 starting with the value at the last index and then backwards to the value at the first index.
+public class Test
+{
+    public static void main(String[] args)
+    {
+        int[] a1 = {1, 3, 7, 9, 15};
+        for (int i = a1.length; i > 0; i--)
+            System.out.print(arr[i] + ", ");
+    }
+}
+Ans:
+public class Test
+{
+    public static void main(String[] args)
+    {
+        int[] a1 = {1, 3, 7, 9, 15};
+        for (int i = a1.length-1; i >= 0; i--) //initializer a1.length-1 and check i >= 0
+            System.out.print(a1[i] + ", "); //fix array variable name
+    }
+}
+
+26. Finish the following method to return the sum of all of the non-negative values in the passed array.
+public class Test
+{
+
+    public static int getSumNonNeg(int[] arr)
+    {
+    }
+
+    public static void main(String[] args)
+    {
+        int[] a1 = {1, 2, 5, 3, -1, -20};
+        System.out.println("The code should print 11 " +
+                           "and your answer is: " + getSumNonNeg(a1));
+    }
+}
+Ans:
+public class Test
+{
+
+    public static int getSumNonNeg(int[] arr)
+    {
+        int sum = 0;
+        for (int v: arr) {
+            if (v > 0) {
+                sum += v;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args)
+    {
+        int[] a1 = {1, 2, 5, 3, -1, -20};
+        System.out.println("The code should print 11 " +
+                           "and your answer is: " + getSumNonNeg(a1));
+    }
+}
+
+27. Finish the following code to print the strings at the odd indices in the array.
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
+
+    }
+}
+Ans:
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
+        for (int i=0; i<stArr1.length; i++) {
+            if (i % 2 == 1) {
+                System.out.println(stArr1[1]);
+            }
+        }
+            
+
+    }
+}
+
+28. Finish the method getSumChars below to return the total number of characters in the array of strings strArr.
+public class Test
+{
+
+    public static int getSumChars(String[] strArr)
+    {
+    }
+
+    public static void main(String[] args)
+    {
+        String[] strArr = {"hi", "bye", "hola"};
+        System.out.println(getSumChars(strArr));
+    }
+}
+Ans:
+public class Test
+{
+
+    public static int getSumChars(String[] strArr)
+    {
+        int l = 0;        
+        if (strArr == null || strArr.length ==0) {
+            return l;
+        }
+        for (String s: strArr) {
+            l += s.length();
+        }
+        return l;
+    }
+
+    public static void main(String[] args)
+    {
+        String[] strArr = {"hi", "bye", "hola"};
+        System.out.println(getSumChars(strArr));
+    }
+}
+
+29. Which index is the last element in an array called nums at?
+Ans: B
+A. nums.length
+B. nums.length - 1
+
+30. Which of the following declarations will cause a compile time error?
+Ans: D
+A. int[] scores = null;
+B. int[] scoreArray = {50,90,85};
+C. String[] nameArray = new String[10];
+D. String[] nameArray = {5, 3, 2};
+E. int[] scores = new int[5];
+
+31. What is returned from arr[3] if arr={6, 3, 1, 2}?
+Ans: B
+A. 1
+B. 2
+C. 3
+D. 6
+E. 4
+
+32. What is returned from mystery when it is passed {10, 30, 30, 60}?
+public static double mystery(int[] arr)
+{
+   double output = 0;
+   for (int i = 0; i < arr.length; i++)
+   {
+      output = output + arr[i];
+   }
+   return output / arr.length;
+}
+Ans: E
+A. 17.5
+B. 30.0
+C. 130
+D. 32
+E. 32.5
+
+33. Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast()?
+private int[ ] a = {-10, -5, 1, 4, 8, 30};
+
+public void doubleLast()
+{
+
+   for (int i = a.length / 2; i < a.length; i++)
+   {
+      a[i] = a[i] * 2;
+   }
+}
+A. {-20, -10, 2, 8, 16, 60}
+B. {-20, -10, 2, 4, 8, 30}
+C. {-10, -5, 1, 8, 16, 60}
+D. {-10, -5, 1, 4, 8, 30}
+
+34. What are the values in a after multAll(3) executes?
+private int[ ] a = {1, 3, -5, -2};
+
+public void multAll(int amt)
+{
+   int i = 0;
+   while (i < a.length)
+   {
+      a[i] = a[i] * amt;
+      i++;
+   } // end while
+} // end method
+Ans: B 
+A. {1, 3, -5, -2}
+B. {3, 9, -15, -6}
+C. {2, 6, -10, -4}
+D. The code will never stop executing due to an infinite loop
+
+35. What are the values in a after mult(2) executes?
+private int[ ] a = {1, 3, -5, -2};
+
+public void mult(int amt)
+{
+   int i = 0;
+   while (i < a.length)
+   {
+      a[i] = a[i] * amt;
+   } // end while
+} // end method
+Ans: D
+A. {1, 3, -5, -2}
+B. {3, 9, -15, -6}
+C. {2, 6, -10, -4}
+D. The code will never stop executing due to an infinite loop
+
+36. Which of the following statements is a valid conclusion. Assume that variable b is an array of k integers and that the following is true:
+b[0] != b[i] for all i from 1 to k-1
+Ans: A
+A. The value in b[0] does not occur anywhere else in the array
+B. Array b is sorted
+C. Array b is not sorted
+D. Array b contains no duplicates
+E. The value in b[0] is the smallest value in the array
+
+37. Consider the following code segment. Which of the following statements best describes the condition when it returns true?
+boolean temp = false;
+for (int i = 0; i < a.length; i++) {
+   temp = (a[i] == val);
+}
+return temp;
+Ans: C 
+A. whenever the first element in a is equal to val
+B. Whenever a contains any element which equals val
+C. Whenever the last element in a is equal to val
+D. Whenever more than 1 element in a is equal to val
+E. Whenever exactly 1 element in a is equal to val
+
+38. Consider the following data field and method findLongest. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example given the code below the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to findLongest?
+private int[] nums = {7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10};
+
+public int findLongest(int target) {
+   int lenCount = 0; // length of current consecutive numbers
+   int maxLen = 0;   // max length of consecutive numbers
+   for (int k = 0; k < nums.length; k++) {
+      if (nums[k] == target) {
+         lenCount++;
+      } else if (lenCount > maxLen) {
+         maxLen = lenCount;
+      }
+   }
+   if (lenCount > maxLen) {
+      maxLen = lenCount;
+   }
+   return maxLen;
+}
+Ans: D 
+A. It is the length of the shortest consecutive block of the value target in nums
+B. It is the length of the array nums
+C. It is the length of the first consecutive block of the value target in nums
+D. It is the number of occurrences of the value target in nums
+E. It is the length of the last consecutive block of the value target in nums
+
+39. Consider the following data field and method. Which of the following best describes the contents of myStuff in terms of m and n after the following statement has been executed?
+private int[] myStuff;
+
+//precondition: myStuff contains
+//   integers in no particular order
+public int mystery(int num) {
+   for (int k = myStuff.length - 1; k >= 0; k--) {
+      if (myStuff[k] < num) {
+          return k;
+      }
+   }
+   return -1;
+}
+
+int m = mystery(n)
+Ans: A
+A. All values in positions m+1 through myStuff.length-1 are greater than or equal to n.
+B. All values in position 0 through m are less than n.
+C. All values in position m+1 through myStuff.length-1 are less than n.
+D. The smallest value is at position m.
+E. The largest value that is smaller than n is at position m.
+
+40. Consider the following field arr and method checkArray. Which of the following best describes what checkArray returns?
+private int[] arr;
+
+// precondition: arr.length != 0
+public int checkArray()
+{
+    int loc = arr.length / 2;
+    for (int k = 0; k < arr.length; k++)
+    {
+        if (arr[k] > arr[loc])
+        {
+            loc = k;
+        }
+    }
+    return loc;
+}
+Ans: A 
+A. Returns the index of the largest value in array arr.
+B. Returns the index of the first element in array arr whose value is greater than arr[loc].
+C. Returns the index of the last element in array arr whose value is greater than arr[loc].
+D. Returns the largest value in array arr.
+E. Returns the index of the largest value in the second half of array arr.
+
+41. Given the following field and method declaration, what is the value in a[1] when m1(a) is run?
+int[] a = {7, 3, -1};
+
+public static int m1(int[] a)
+{
+   a[1]--;
+   return (a[1] * 2);
+}
+Ans: B 
+A. 4
+B. 2
+C. 12
+D. 6
+E. 3
+
+42. Consider the following code. What is the maximum amount of times that HELLO could possibly be printed?
+for (int i = 1; i < k; i++)
+{
+   if (arr[i] < someValue)
+   {
+     System.out.print("HELLO")
+   }
+}
+Ans: A
+A. k - 1
+B. k + 1
+C. k
+D. 1
+E. 0
+
+43. Consider the following method changeArray. An array is created that contains {2, 8, 10, 9, 6} and is passed to changeArray. What are the contents of the array after the changeArray method executes?
+public static void changeArray(int[] data)
+{
+   for (int k = data.length - 1; k > 0; k--)
+      data[k - 1] = data[k] + data[k - 1];
+}
+Ans: E
+A. {2, 6, 2, -1, -3}
+B. {-23, -21, -13, -3, 6}
+C. {10, 18, 19, 15, 6}
+D. This method results in an IndexOutOfBounds exception.
+E. {35, 33, 25, 15, 6}
+
+44. Assume that arr1={1, 5, 3, -8, 6} and arr2={-2, -1, -5, 3, -4} what will the contents of arr1 be after copyArray finishes executing?
+public static void copyArray(int[] arr1, int[] arr2)
+{
+   for (int i = arr1.length / 2; i < arr1.length; i++)
+   {
+      arr1[i] = arr2[i];
+   }
+}
+Ans: C
+A. [-2, -1, -5, 3, -4]
+B. [-2, -1, 3, -8, 6]
+C. [1, 5, -5, 3, -4]
+D. [1, 5, 3, -8, 6]
+E. [1, 5, -2, -5, 2]
+
+45. Given the following code segment, which of the following will cause an infinite loop? Assume that temp is an int variable initialized to be greater than zero and that a is an array of ints.
+for ( int k = 0; k < a.length; k++ )
+{
+   while ( a[ k ] < temp )
+   {
+      a[ k ] *= 2;
+   }
+}
+Ans: B 
+A. The values don't matter this will always cause an infinite loop.
+B. Whenever a includes a value that is less than or equal to zero.
+C. Whenever a has values larger then temp.
+D. When all values in a are larger than temp.
+E. Whenever a includes a value equal to temp.
+
+46. Given the following array instance variable and method, which of the following best describes the contents of myStuff after (int m = mystery(n);) has been executed?
+// private field in the class
+private int[ ] myStuff;
+
+//precondition: myStuff contains
+//  integers in no particular order
+public int mystery(int num)
+{
+   for (int k = myStuff.length - 1; k >= 0; k--)
+   {
+       if (myStuff[k] < num)
+       {
+          return k;
+       }
+   }
+   return -1;
+ }
+Ans: A 
+A. All values in positions m+1 through myStuff.length-1 are greater than or equal to n.
+B. All values in position 0 through m are less than n.
+C. All values in position m+1 through myStuff.length-1 are less than n.
+D. The smallest value is at position m.
+
+47. Consider the following data field and incomplete method, partialSum, which is intended to return an integer array sum such that for all i, sum[i] is equal to arr[0] + arr[1] + ... + arr[i]. For instance, if arr contains the values {1, 4, 1, 3}, the array sum will contain the values {1, 5, 6, 9}. Which of the following is true about the two implementations of missing code on line 9 that are proposed?
+private int[] arr;
+
+public int[] partialSum() {
+   int[] sum = new int[arr.length];
+
+   for (int j = 0; j < sum.length; j++)
+      sum[j] = 0;
+
+   /* missing code */
+   return sum;
+}
+
+
+Implementation 1
+
+for (int j = 0; j < arr.length; j++)
+    sum[j] = sum[j - 1] + arr[j];
+
+
+Implementation 2
+
+for (int j = 0; j < arr.length; j++)
+   for (int k = 0; k <= j; k++)
+      sum[j] = sum [j] + arr[k];
+Ans: D
+A. Both implementations work as intended and are equally fast.
+B. Both implementations work as intended, but implementation 1 is faster than implementation 2.
+C. Both implementations work as intended, but implementation 2 is faster than implementation 1.
+D. Implementation 1 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException.
+E. Implementation 2 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException.

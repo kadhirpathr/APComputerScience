@@ -1,0 +1,226 @@
+Unit 2: 
+
+1. Both Object and String classes belong to which package
+    java.lang
+    java.base
+    java.util
+    lang
+2. All the classes in java are subclass of Object class
+3. Following code segments are effectively same.
+    public class Test {}
+    public class Test extends Object {}
+4. Object is super class of all the classes in java 
+5. java.lang package is automatically imported in any and all java program
+6. When printing an object, which method of Object class is invoked?
+7. toString method of Object class should be overridden in a class to print human readable representation of an object 
+8. toString method returns string representation of an object.
+9. If toString method is not overwridden in subclass, super class's toString method is called to return string represendation of the object.
+10. What is the output of the following code?
+class Test {
+    public String toString() {
+        return "Test";
+    }
+}
+public class Test1 extends Test {
+    public static void main (String[] args) {
+        Test1 t1 = new Test1();
+        System.out.println(t1.toString());
+    }
+}
+11. Which method of Object class is used to compare 2 objects? ____________
+12. A string literal is enclosed in double quotes
+13. Create java statement to declare a variable to store a string and initialize the string with the word 'my first string'. 
+    Then write java code to print the string value to console.
+14. A java string can be created using string literal or using constructor of java.lang.String class.
+15. What is the value of s1 in below code
+String s1 = "I am a string object";
+s1 += " I am also immutable";
+16. What is the value of s1 in below code
+String s1 = "I am a string object";
+s1 -= " I am also immutable";
+17. What is the value of s2 in below code
+String s1 = "I am a string object";
+String s2 = s1 +  " I am also immutable";
+18. What is the value of s1 in below code
+String s1 = "I am a string object";
+String s2 = s1 +  " I am also immutable";
+19. What is the value of len in below code (20)
+String s1 = "I am a string object";
+int len = s1.length();
+20. What is the value of s2 in below code (a string object)
+String s1 = "I am a string object";
+String s2 = s1.substring(5);
+21. What is the value of s2 in below code (a string)
+String s1 = "I am a string object";
+String s2 = s1.substring(5, 13);
+22. What is the value of i in below code (2)
+String s1 = "I am a string object";
+int i = s1.indexOf("a");
+23. What is the value of i in below code
+String s1 = "I am a string object";
+int i = s1.indexOf('a');
+        1) 2
+        2) compile error
+        3) 3
+24. What is the value of i in below code (2)
+String s1 = "I am a string object";
+int i = s1.indexOf("a", s1.indexOf("a")); 
+25. What is the value of i in below code (5)
+String s1 = "I am a string object";
+int i = s1.indexOf('a', s1.indexOf("a")+1);          
+26. Create a string object; initialize with any string and write code to print last character of the String
+27. Create a string object; initialize with any string and write code to print last 3 characters of the String. If string contains less than 3 characters, print the string.
+28. Explain the equals method of String object.
+29. What is the value of s1 in below code
+String s1 = "I am a string object";
+s1 += (double)2;
+        1) compile error
+        2) "I am a string object2";
+        3) "I am a string object2.0";
+30. You can use == operator to check if 2 string objects contain same string literal. Justify your answer with code samples.
+31. What is the value of b in below code ( false)
+String s1 = new String("one");
+String s2 = new String("one");
+boolean b = s1 == s2;
+    1) true
+    2) false
+    3) compile error
+32. What is the value of b in below code ( true)
+String s1 = "one";
+String s2 = "one"
+boolean b = s1 == s2;
+    1) true
+    2) false
+    3) compile error
+33. What is the value of b in below code ( true)
+String s1 = new String("one");
+String s2 = new String("one");
+boolean b = s1.equals(s2);
+    1) true
+    2) false
+    3) compile error 
+34. What is difference between == operator and equals method when comparing 2 string objects?
+35. What is StringIndexOutOfBoundsException. Explain with code examles.
+36. What is the value of i in below code
+String s1 = "I am a string object";
+int i = s1.indexOf("a", s1.indexOf("A")); 
+    1) 2
+    2) 3
+    3) will result in StringIndexOutOfBoundsException
+37. The following code will print an empty string irrespective of value of s. (true)
+String s = "SOME RANDOM STRING";
+System.out.println(s.substring(s.length()));
+38. Implement a code snippet such that each character in string s is printed in a new line in console
+String s = "some random string";
+for (/* implement this */) {
+    System.out.println(/* implement this */);
+}
+39. equals is a method in java.lang.Object class and is used to compare 2 objects.
+40. String class overrides equals method defined in Object class to provide specific implementation to compare 2 strings.
+41. What is the value of i in following statement (-1)
+int i = "a".compareTo("b");
+42. What is the value of i in following statement (-1)
+int i = 'a' - 'b';
+43. What is result of following expression (-ve integer)
+"short".compareTo("shorthand");
+44. What is result of following expression (+ve integer)
+"shorthandnotation".compareTo("Short");
+45. Following expressions return in same integer value
+"short".compareTo("Short");
+"short".compareTo("sHort");
+"short".compareTo("shOrt");
+"short".compareTo("shorT");
+
+46. What does immutable property of String mean? Please explain with examples.
+47. Analyze the following 2 statements and explain the difference with code samples (if needed)
+a) String s1 = "a string";
+b) String s1 = new String("a string");
+48. What is the value of s1 in below code
+String s1 = "I am a string object";
+s1 += Boolean.FALSE;
+        1) compile error
+        2) "I am a string objectfalse"
+        3) "I am a string object false"
+49. What are the rules for lexicographic ordering for alpha-numeric characters
+50. Explain the difference between lexicographical and numerical ordering with examples.
+51. If s1 comes before s2 when arranged in alphabetical order, s1.compareTo(s2) will return a value (True)
+
+All uppercase letters come before lower case letters. 
+If two letters are the same case, then alphabetic order is used to compare them. 
+If two strings contain the same characters in the same positions, then the shortest string comes first.
+
+1
+
+        
+
+String methods in APCS:
+length
+substring
+indexOf
+equals
+compareTo
+
+
+
+
+
+
+Assignment 1: 
+Just as we have worked with the Course class, we will now create our own Polygon class. 
+The polygon class should have at least 1 instance variable which will be an int named numSides. 
+The class should also have overloaded constructors with one having 0 parameters and the other having 
+1. There should also be a getter (accessor) and setter (mutator) method to modify the instance variable. 
+The most important component of this class is the toString() method which, when invoked, returns a String 
+indicating the number of sides in the polygon.
+
+
+
+Assignement 3:
+Review String methods in https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+1. Explain valueOf methods in String class.
+2. How many replace methods are defined in String class. Explain what the replace methods do with comprehensive examples. Explain how the string's immutable property 
+is preserved inspite of the fact that replace methods modifies string.
+3. Explain how compareTo method works? Explain how the lexiographic ordering works with code samples.
+4. Which methods can be used to convert case of the characters in string?
+5. How many indexOf methods are defined in String class. Expalin how these methods work with comprehensive examples
+    Note: include lasIndexOf methods in your analysis 
+6. How many substring methods are defined in String class. Explain how these methods work with comprehensive examples.
+
+Assignment 4: 
+
+Using only length and substring methods of the String class, write a program to take input from console and print reverse of the string.
+e.g:
+    input: Hello
+    output:
+        Hellow reversed is olleH
+
+
+Assignment 5:
+
+Write a program to check if an input string is palindrome 
+Note: Palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run
+e.g:
+    input: Madam
+    outout:
+        Madam is a palindrom
+    input: Test
+    output:
+        Test is not a palindrome.
+
+Assignment 6:
+Write a while loop that replaces every occurrence of “cat” in the message with “dog” using the indexOf and substring methods.
+
+public class ChallengeReplace
+{
+  public static void main(String[] args)
+  {
+     String message = "I love cats! I have a cat named Coco. My cat's very smart!";
+
+     // Write a loop here that replaces every occurrence of "cat"
+     // in the message with "dog", using indexOf and substring.
+
+
+
+     System.out.println(message);
+   }
+}

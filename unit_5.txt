@@ -1,0 +1,1292 @@
+10. Based on the method header shown below, which method call is correct?
+public static void mystery(String s, int i)
+Ans: A
+A. mystery("abc", 9);
+B. mystery("xyz", "9");
+C. mystery(9, 5);
+
+11. Based on the method header shown below, which method call is correct?
+public static void mystery(boolean b, String s)
+A. mystery("true", "hello");
+B. mystery("hello", false);
+C. mystery(true, "hello");
+
+12. The variable age is visible in which method(s)?
+public class Visibility {
+
+  public static void print1(int num) {
+    System.out.println("num is " + num);
+  }
+
+  public static void main(String[] args) {
+      int age = 20;
+      print1(age);
+  }
+}
+A. print1
+B. main
+C. print1 and main
+
+13. Which method has a scope error (i.e. uses a variable that is not visible in that method)?
+public class Visibility {
+
+  public static void print1(int num) {
+    System.out.println("num is " + num);
+  }
+
+  public static void print2() {
+    System.out.println("age is " + age);
+  }
+
+  public static void main(String[] args) {
+      int age = 20;
+      print1(age);
+      print2();
+  }
+}
+A. print1
+B. print2
+C. main
+
+14. Refactor the following code to eliminate the duplicate code using method 
+public class ShippingCostCalculator {
+
+public static void main(String[] args) {
+
+   double weight1, weight2, weight3;
+   double cost1, cost2, cost3;
+
+   weight1 = 22.0;
+   weight2 = 10.0;
+   weight3 = 12.0;
+
+   //calculate cost for item#1
+   if (weight1 < 15.0)
+   {
+      cost1 = 9.95;
+   }
+   else
+   {
+      cost1 = 12.95;
+   }
+   System.out.println(cost1);
+
+   //calculate cost for item#2
+   if (weight2 < 15.0)
+   {
+      cost2 = 9.95;
+   }
+   else
+   {
+      cost2 = 12.95;
+   }
+   System.out.println(cost2);
+
+   //calculate cost for item#3
+   if (weight3 < 15.0)
+   {
+      cost3 = 9.95;
+   }
+   else
+   {
+      cost3 = 12.95;
+   }
+   System.out.println(cost3);
+
+  }
+}
+
+15. Based on the method header below, which return statement DOES NOT have the correct type?
+public static int mystery()
+A. return 10;
+B. return 12 * 4;
+C. return 15 / 2;
+D. return 3.7 ;
+
+16. A pedometer estimates that taking 2,000 steps is the same as walking 1 mile. Write a method convertToMiles that takes a parameter for the number of steps and returns the equivalent miles walked. Update the main method to call convertToMiles 3 times with values 500, 2000, 3000. Carefully consider the method return type. Watch out for integer division in the method body! You can assume the number of steps is an integer.
+public class StepCounter
+{
+    //add convertToMiles method here
+
+    public static void main(String[] args)
+    {
+       System.out.println("500 steps is equal to " + convertToMiles(500) + " miles");
+       //add 2 more method calls here for 2000 and 3000 steps.
+
+    }
+}
+
+17. he following method is intended to return the substring starting at index i until the end of the string. For example, getiToEnd(“012”,1) should return “12”. Which of the following is the most appropriate precondition for the method so that it does not throw an exception?
+/* missing precondition */
+public String getiToEnd(String str, int i)
+{
+    return str.substring(i, str.length());
+}
+Ans: D
+A. /* Precondition: i >= 0 */
+B. /* Precondition: i <= str.length() */
+C. /* Precondition: 0 < i < str.length() */
+D. /* Precondition: 0 <= i < str.length() */
+
+18. Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.
+public class Cat
+{
+  /* missing code */
+}
+
+Which of the following replacements for /* missing code */ is the most appropriate
+implementation of the class?
+A.
+public String name;
+private int age;
+private Cat(String name, int age)
+{ /* implementation not shown */ }
+
+B.
+private String name;
+private int age;
+private Cat(String name, int age)
+{ /* implementation not shown */ }
+
+C.
+private String name;
+private int age;
+public Cat(String name, int age)
+{ /* implementation not shown */ }
+
+D.
+public String name;
+private int age;
+private Cat(String name, int age)
+{ /* implementation not shown */ }
+
+E.
+public String name;
+public int age;
+public Cat(String name, int age)
+{ /* implementation not shown */ }
+
+19. Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.
+public class Party
+{
+/* missing code */
+}
+
+Which of the following replacements for /* missing code */ is the most appropriate
+implementation of the class?
+A.
+private int numOfPeople;
+private int volumeOfMusic;
+private int numOfBoxesOfPizza;
+public Party()
+{ /* implementation not shown */ }
+private void startParty()
+{ /* implementation not shown */ }
+
+B.
+private int numOfPeople;
+private int volumeOfMusic;
+private int numOfBoxesOfPizza;
+public Party()
+{ /* implementation not shown */ }
+public void startParty()
+{ /* implementation not shown */ }
+
+C.
+public int numOfPeople;
+public int volumeOfMusic;
+public int numOfBoxesOfPizza;
+public Party()
+{ /* implementation not shown */ }
+public void startParty()
+{ /* implementation not shown */ }
+
+D.
+private int numOfPeople;
+private int volumeOfMusic;
+private int numOfBoxesOfPizza;
+private Party()
+{ /* implementation not shown */ }
+private void startParty()
+{ /* implementation not shown */ }
+
+20. What best describes the purpose of a class’s constructor?
+A. Determines the amount of space needed for an object and creates the object
+B. Names the new object
+C. Return to free storage all the memory used by this instance of the class.
+D. Initialize the instance variables in the object
+
+21. Consider the following class. Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?
+public class Movie
+{
+    private String title;
+    private String director;
+    private double rating;
+    private boolean inTheaters;
+
+    public Movie(String t, String d, double r)
+    {
+        title = t;
+        director = d;
+        rating = r;
+        inTheaters = false;
+    }
+
+    public Movie(String t)
+    {
+        title = t;
+        director = "unknown";
+        rating = 0.0;
+        inTheaters = false;
+    }
+}
+A. Movie m = new Movie(8.0, "Lion King");
+B. Movie m = Movie("Lion King", 8.0);
+C. Movie m = new Movie();
+D. Movie m = new Movie("Lion King", "Disney", 8.0);
+E. Movie m = new Movie("Lion King");
+
+22. Create a class Student with 4 instance variables, 3 constructors, and a print method. Write a main method that creates 3 Student objects with the 3 different constructors and calls their print() method.
+/** class Student
+ * with 4 instance variables,
+ * 3 constructors, a print method,
+ * and a main method to test them.
+ */
+ public class Student
+ {
+    // Write 4 instance variables
+
+
+    // Write 3 constructors to initialize the instance variables
+    //  1. no parameters using default values
+    //  2. 1 parameter and the rest default values
+    //  3. 4 parameters
+
+
+    // Write a print method that prints all the instance variables
+    public void print()
+    {
+
+
+    }
+
+    // main method
+    public static void main(String[] args)
+    {
+       // Construct 3 Student objects using the 3 different constructors
+
+
+       // call their print() methods
+
+    }
+ }
+ Ans:
+ /** class Student
+ * with 4 instance variables,
+ * 3 constructors, a print method,
+ * and a main method to test them.
+ */
+ public class Student
+ {
+    // Write 4 instance variables
+     private String firstName;
+     private String lastName;
+     private String school;
+     private int age;
+
+
+    // Write 3 constructors to initialize the instance variables
+    //  1. no parameters using default values
+     public Student() {}
+    //  2. 1 parameter and the rest default values
+     public Student(String school) {
+         this.school = school;
+     }
+         
+    //  3. 4 parameters
+     public Student(String firstName, String lastName, String school, int age) {
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.school = school;
+         this.age = age;
+         
+     }
+
+
+
+    // Write a print method that prints all the instance variables
+    public void print()
+    {
+        System.out.println("Name=  " + firstName + ", " + lastName + "\n"
+                           + "school = " + school + "\n"
+                           + "age = " + age);
+
+    }
+
+    // main method
+    public static void main(String[] args)
+    {
+       // Construct 3 Student objects using the 3 different constructors
+        Student s1 = new Student();
+        Student s2 = new Student("GHS");
+        Student s3 = new Student("Kadhir", "Ramesh", "GHS", 15);
+    
+
+       // call their print() methods
+        s1.print();
+        s2.print();
+        s3.print();
+
+    }
+ }
+ 
+23. Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?
+public class Cat
+{
+    private String name;
+    private int age;
+    private int kittens;
+
+    public Cat(String n, int a, int k)
+    {
+        name = n;
+        age = a;
+        kittens = k;
+    }
+    public Cat(String n, int a)
+    {
+        name = n;
+        age = a;
+        kittens = 0;
+    }
+    /* Other methods not shown */
+}
+
+I.   Cat c = new Cat("Sprinkles", 5, 0);
+II.  Cat c = new Cat("Lucy", 0, 5);
+III. Cat c = new Cat("Luna", 5);
+A. I only
+B. II only
+C. III only
+D. I and III only
+E. I, II and III
+
+24. Drag the concept on definition
+accessible from outside the class => public
+sets the instance variable to a value in its parameter => mutator method 
+initializes instance variables to values => constructor
+gets and returns the value of an instance variable => accessor method 
+accessible only inside the class => private 
+
+25. Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with 2 constructors, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
+/**
+    Pet class (complete comments)
+    @author
+    @since
+
+*/
+class Pet
+{
+   // complete class definition with set methods
+
+}
+
+public class TesterClass
+{
+   // main method for testing
+   public static void main(String[] args)
+   {
+      // Create Pet objects and test all your set methods
+
+   }
+ }
+
+26. Consider the following class definition.
+public class Liquid
+{
+    private int currentTemp;
+
+    public Liquid(int temp)
+    {
+        currentTemp = temp;
+    }
+
+    public void resetTemp()
+    {
+        currentTemp = newTemp;
+    }
+}
+Which of the following best identifies the reason the class does not compile?
+Ans: D
+A. The constructor header does not have a return type.
+B. The resetTemp method is missing a return type.
+C. The constructor should not have a parameter.
+D. The resetTemp method should have a parameter.
+E. The instance variable currentTemp should be public instead of private.
+
+27. Consider the following class, which uses the instance variable dollars to represent the money in a wallet in dollars.
+public class Wallet
+{
+    private double dollars;
+
+    public double putMoneyInWallet(int amount)
+    {
+        /* missing code */
+    }
+}
+The putMoneyInWallet method is intended to increase the dollars in the wallet by the parameter amount and then return the updated dollars in the wallet. Which of the following code segments should replace missing code so that the putMoneyInWallet method will work as intended?
+Ans: C
+A.
+amount += dollars;
+return dollars;
+
+B.
+dollars = amount;
+return amount;
+
+C.
+dollars += amount;
+return dollars;
+
+D.
+dollars = dollars + amount;
+return amount;
+
+E.
+amount = dollars + amount;
+return dollars;
+
+28. Consider the Liquid class below.
+public class Liquid
+{
+    private int currentTemp;
+    private int boilingPoint;
+
+    public Liquid(int ct, int bp)
+    {
+        currentTemp = ct;
+        boilingPoint = bp;
+    }
+
+    public boolean isBoiling(int amount)
+    {
+        /* missing code */
+    }
+}
+The isBoiling method is intended to return true if increasing the currentTemp by the parameter amount is greater than or equal to the boilingPoint, or otherwise return false. Which of the following code segments can replace missing code to ensure that the isBoiling method works as intended?
+
+I.   if (currentTemp + amount < boilingPoint)
+     {
+         return false;
+     }
+     else
+     {
+         return true;
+     }
+II.  if (amount > currentTemp)
+     {
+         return false;
+     }
+     else
+     {
+         return currentTemp;
+     }
+III. if (amount + currentTemp >= boilingPoint)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+A. I only
+B. II only
+C. III only
+D. I and III only.
+E. I, II, III
+
+29. Consider the class Temperature below which has a static variable. What is the output of the main method below?
+public class Temperature
+{
+   private double temperature;
+   public static double maxTemp = 0;
+
+   public Temperature(double t)
+   {
+        temperature = t;
+        if (t > maxTemp)
+            maxTemp = t;
+   }
+
+   public static void main(String[] args)
+   {
+        Temperature t1 = new Temperature(75);
+        Temperature t2 = new Temperature(100);
+        Temperature t3 = new Temperature(65);
+        System.out.println("Max Temp: " + Temperature.maxTemp);
+   }
+}
+Ans: C
+A. Max Temp: 0
+B. There is a compiler error because the static variable maxTemp cannot be used inside a non-static constructor.
+C. Max Temp: 100
+D. Max Temp: 75
+E. Max Temp: 65
+
+30. Consider the following class definitions. Which of the following best explains why the class will not compile?
+public class Party
+{
+    private int boxesOfFood;
+    private int numOfPeople;
+
+    public Party(int people, int foodBoxes)
+    {
+        numOfPeople = people;
+        boxesOfFood = foodBoxes;
+    }
+
+    public void orderMoreFood(int additionalFoodBoxes)
+    {
+        int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
+        boxesOfFood = updatedAmountOfFood;
+    }
+
+    public void eatFoodBoxes(int eatenBoxes)
+    {
+        boxesOfFood = updatedAmountOfFood - eatenBoxes;
+    }
+}
+A. The class is missing an accessor method.
+B. The instance variables boxesOfFood and numOfPeople should be designated public instead of private.
+C. The return type for the Party constructor is missing.
+D. The variable updatedAmountOfFood is not defined in eatFoodBoxes method.
+E. The Party class is missing a constructor
+
+31. Consider the following class definition.
+public class Movie
+{
+    private int currentPrice;
+    private int movieRating;
+
+    public Movie(int p, int r)
+    {
+        currentPrice = p;
+        movieRating = r;
+    }
+
+    public int getCurrentPrice()
+    {
+        int currentPrice = 16;
+        return currentPrice;
+    }
+
+    public void printPrice()
+    {
+        System.out.println(getCurrentPrice());
+    }
+}
+Which of the following reasons explains why the printPrice method is “broken” and only ever prints out a value of 16?
+
+A. The private variables currentPrice and movieRating are not properly initialized.
+B. The private variables currentPrice and movieRating should have been declared public.
+C. The printPrice method should have been declared as private.
+D. currentPrice is declared as a local variable in the getCurrentPrice method and set to 16, and will be used instead of the instance variable currentPrice.
+E. The currentPrice instance variable does not have a value.
+
+32. Consider the following class definitions.
+public class Pay
+{
+ private double pay;
+
+ public Pay(double p)
+ {
+     pay = p;
+ }
+
+ public double getPay()
+ {
+     return pay;
+ }
+
+ public void calculatePayWithOvertime()
+ {
+     // this Pay object is passed to the Overtime constructor
+     Overtime ot = new Overtime(this);
+     pay = ot.getOvertimePay();
+ }
+}
+
+public class Overtime
+{
+ private double payWithOvertime;
+
+ public Overtime(Pay p)
+ {
+     payWithOvertime = p.getPay() * 1.5;
+ }
+ public double getOvertimePay()
+ {
+     return payWithOvertime;
+ }
+}
+The following code segment appears in a class other than Pay or Overtime.
+
+Pay one = new Pay(20.0);
+one.calculatePayWithOvertime();
+System.out.println(one.getPay());
+What, if anything, is printed as a result of executing the code segment?
+
+A. 10.0
+B. 15.0
+C. 20.0
+D. 30.0
+E. Nothing is printed because the code will not compile.
+
+33. Create a class called BankAccount below that keeps track of the account holder’s name, the account number, and the balance in the account. Make sure you use the appropriate data types for these.
+
+Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the this keyword to distinguish between the instance variables and the parameter variables.
+
+Write a toString() method for the class. Use the this keyword to return the instance variables.
+
+Write a withdraw(amount) and deposit(amount) for the class. Withdraw should subtract the amount from the balance as long as there is enough money in the account (the balance is larger than the amount). Deposit should add the amount to the balance. Use the this keyword to refer to the balance.
+
+Test your class with a main method that creates a Bank Account object and calls its deposit and withdraw methods and prints out the object to test its toString() method.
+
+public class BankAccount
+{
+
+
+}
+Ans:
+public class BankAccount
+{
+    private String name;
+    private String accountNumber;
+    private double balance;
+    
+    public BankAccount(String name, String accountNumber) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+    }
+    public BankAccount(String name, String accountNumber, double balance) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+    public String toString() {
+        return "Name = " + this.name 
+            + " Account Number = " + this.accountNumber
+            + " Balance = " + this.balance;
+    }
+    public void withdraw(double amount) {
+        if (amount <=0) {
+            return;
+        }
+        if (this.balance > amount){
+            this.balance =- amount;
+        }
+    }
+    public void deposit(double amount) {
+        if (amount >= 0) {
+            this.balance -=amount;
+        }
+    }
+    public static void main(String[] args) {
+        BankAccount ba = new BankAccount("Kadhir", "123", 1000);
+        ba.deposit(100);
+        ba.withdraw(10);
+    }
+
+}
+
+34. Consider the following class definitions.
+public class Liquid
+{
+    private int currentTemp;
+
+    public Liquid (int ct)
+    {
+        currentTemp = ct;
+    }
+
+    public int getCurrentTemp()
+    {
+        return currentTemp;
+    }
+
+    public void addToJar(LiquidJar j)
+    {
+        j.addLiquid(this);
+    }
+}
+
+public class LiquidJar
+{
+    private int totalTemp;
+
+    public LiquidJar()
+    {
+      totalTemp = 0;
+    }
+
+    public void addLiquid(Liquid l)
+    {
+        totalTemp += l.getCurrentTemp();
+    }
+
+    public int getTotalTemp()
+    {
+        return totalTemp;
+    }
+    // Constructor not shown.
+}
+Consider the following code segment, which appears in a class other than Liquid or LiquidJar.
+
+Liquid water = new Liquid(50);
+Liquid milk = new Liquid(15);
+
+LiquidJar j = new LiquidJar();
+water.addToJar(j);
+milk.addToJar(j);
+System.out.println(j.getTotalTemp());
+What, if anything, is printed out after the execution of the code segment?
+
+A. 50
+B. 15
+C. 65
+D. Nothing, the code segment attempts to access the private variable currentTemp outside of its scope.
+E. Nothing, the code segment attempts to access the private variable totalTemp outside of its scope.
+
+35. Drag the concept on definition
+A programming language that you can use to tell a computer what to do => Java 
+does the actual work in an object-oriented program => object 
+Translates Java source file (ends in .java) into a Java class file (ends in .class) => compiler 
+defines a type => class 
+initializes the fields of an object after it has been created => constructor
+defines behavior => method
+holds data or a property => field 
+where execution starts > main method
+
+36. The Liquid class will contain two double attributes for a liquid’s boiling point temperature and freezing point temperature. The class will also contain a constructor.
+public class Liquid
+{
+   /* missing code */
+}
+Which of the following replacements for /* missing code */ is the most appropriate
+implementation of the class?
+Ans: A
+A.
+private double boilingPoint;
+private double freezingPoint;
+public Liquid(double boilingPoint, double freezingPoint)
+{ /* implementation not shown */ }
+
+B.
+private double boilingPoint;
+private double freezingPoint;
+private Liquid(double boilingPoint, double freezingPoint)
+{ /* implementation not shown */ }
+
+C.
+private double boilingPoint;
+public double freezingPoint;
+private Liquid(double freezingPoint, double boilingPoint)
+{ /* implementation not shown */ }
+
+D.
+public double boilingPoint;
+public double freezingPoint;
+private Liquid(double boilingPoint, double freezingPoint)
+{ /* implementation not shown */ }
+
+E.
+public double freezingPoint;
+public double boilingPoint;
+public Liquid(double freezingPoint, double boilingPoint)
+{ /* implementation not shown */ }
+
+37. The Cat class below will contain two String attributes and one int attribute for name, color, and age; a constructor; and an adoptCat method. The adoptCat method is intended to be accessed outside the class.
+public class Cat
+{
+  /* missing code */
+}
+Which of the following replacements for /* missing code */ is the most appropriate
+implementation of the class?
+Ans: B 
+A.
+public String name;
+public String color;
+public int age;
+private Cat()
+{ /* implementation not shown */ }
+public void adoptCat(String n, String c, int a)
+{ /* implementation not shown */ }
+
+B.
+private String name;
+private String color;
+private int age;
+public Cat()
+{ /* implementation not shown */ }
+public void adoptCat(String n, String c, int a)
+{ /* implementation not shown */ }
+
+C.
+public String name;
+public String color;
+public int age;
+private Cat()
+{ /* implementation not shown */ }
+private void adoptCat(String n, String c, int a)
+{ /* implementation not shown */ }
+
+D.
+public String name;
+public String color;
+public int age;
+public Cat()
+{ /* implementation not shown */ }
+public void adoptCat(String n, String c, int a)
+{ /* implementation not shown */ }
+
+E.
+private String name;
+private String color;
+private int age;
+public Cat()
+{ /* implementation not shown */ }
+private void adoptCat(String n, String c, int a)
+{ /* implementation not shown */ }
+
+38. Consider the definition of the Party class below. The class uses the instance variable numOfPeople to indicate how many people are at the party.
+public class Party
+{
+    private int numOfPeople;
+    private String partyHost;
+
+    public Party (String name, int people)
+    {
+        partyHost = name;
+        numOfPeople = people;
+    }
+}
+
+Which of the following statements will create a Party object
+that represents a party that has three people at it?
+Ans: 
+A. Party p = new Party (“Natasha”, “3”);
+B. Party p = new Party (“Billie”, “2+1”);
+C. Party p = new Party (“Eduardo”, 3);
+D. Party p = new Party (“Bob”, three);
+E. Party p = new Party (“Emillio”, “three”);
+
+39. Consider the following class definition. Each object of the class Party will store the party host’s name as partyHost, the number of people as numOfPeople, and the capacity that the event can hold as capacity. Which of the following code segments, found in a class other than Party, can be used to create a party hosted by Charlie without anyone there initially, but the place can hold 78 people ?
+public class Party
+{
+    private String partyHost;
+    private int numOfPeople;
+    private int capacity;
+
+    public Party(String name, int num, int cap)
+    {
+        partyHost = name;
+        numOfPeople = num;
+        capacity = cap;
+    }
+    public Party (String name, int cap)
+    {
+        partyHost = name;
+        numOfPeople = 0;
+        capacity = cap;
+    }
+    /* Other methods not shown */
+}
+
+I.   Party b = new Party("Charlie", 78);
+II.  Party b = new Party("Charlie", 0, 70+8);
+III. Party b = new Party("Charlie", 0, 78);
+A. I and II
+B. II and III
+C. I only
+D. I and III
+E. I, II, and III
+
+40. Consider the following class definition.
+public class Party
+{
+    private int numOfPeople;
+    private double volumeOfMusic;
+    /* missing constructor */
+}
+The following statement appears in a method in a class other than Party. It is intended to create a new Party object p with its attributes set to 10 and 5.0.
+
+Party p = new Party(10, 5.0);
+
+Which of the following can be used to replace /* missing constructor */
+so that the object p is correctly created?
+Ans: B 
+A.
+public Party(int first, double second)
+{
+    numOfPeople = 10;
+    volumeOfMusic = 5.0;
+}
+
+B.
+public Party(int first, double second)
+{
+    numOfPeople = first;
+    volumeOfMusic = second;
+}
+
+C.
+public Party(int first, double second)
+{
+    first = numOfPeople;
+    second = volumeOfMusic;
+}
+
+D.
+public Party(int first, double second)
+{
+    first = 10;
+    second = 5.0;
+}
+
+41. Consider the following class definition that defines a Liquid class with a boilingPoint, a currentTemperature, and a freezingPoint. For example, Liquid water = new Liquid(100, 50, 0); defines a water object with a boiling point of 100, a current temperature of 50, and a freezing temperature of 0.
+public class Liquid
+{
+    private int boilingPoint;
+    private int currentTemp;
+    private int freezingPoint;
+
+    public Liquid(int bp, int ct, int fp)
+    {
+        boilingPoint = bp;
+        currentTemp = ct;
+        freezingPoint = fp;
+    }
+    /* Other methods not shown */
+}
+Which of the following preconditions is reasonable for the Liquid constructor?
+Ans: B 
+A. Precondition: fp > ct > bp
+B. Precondition: fp < ct < bp
+C. Precondition: currentTemp > 0
+D. Precondition: fp > 0
+
+42. Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
+public class Cat
+{
+    private int age;
+
+    public Cat(int a)
+    {
+        age = a;
+    }
+
+    public int getAge()
+    {
+        return a;
+    }
+}
+Ans: D 
+A. The return type of the getAge method should be void.
+B. The getAge method should have at least one parameter.
+C. The variable age is not declared inside the getAge method.
+D. The instance variable age should be returned instead of a, which is local to the constructor.
+E. The getAge method should be declared as private.
+
+43. Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?
+public class Liquid
+{
+    private int currentTemperature;
+
+    public Liquid(int ct)
+    {
+        currentTemperature = ct;
+    }
+
+    public void getCurrentTemperature()
+    {
+        return currentTemperature;
+    }
+}
+Ans: E
+A. The variable currentTemperature is not declared inside of the getCurrentTemperature method.
+B. The getCurrentTemperature method should have at least one parameter.
+C. The getCurrentTemperature method should be declared as private.
+D. The instance variable ct should be returned instead of currentTemperature.
+E. The return type of the getCurrentTemperature method should be int.
+
+44. Consider the following class definition.
+public class Liquid
+{
+    private int currentTemp;
+
+    public Liquid(int temp)
+    {
+        currentTemp = temp;
+    }
+
+    public int getTemp()
+    {
+      return currentTemp;
+    }
+
+    public void resetTemp(int new_temp)
+    {
+        currentTemp = new_temp;
+    }
+}
+Consider the following code segment, which appears in a method in a class other than Liquid. The code segment does not compile.
+
+Liquid liq = new Liquid(50);
+System.out.println("The temperature of the liquid is " + liq.currentTemp);
+Which of the following best identifies the reason the code segment does not compile?
+Ans: B 
+A. The Liquid class constructor should not have a parameter.
+B. The private instance variable cannot be accessed from outside the class unless the accessor method is used.
+C. currentTemp does not have a value.
+D. The resetTemperature method does not return a value that can be printed.
+E. The getTemp method cannot be called from outside the Liquid class.
+
+45. In the Liquid class below, the raiseTemperature method is intended to increase the value of the instance variable currentTemp by the value of the parameter increase. The method does not work as intended.
+public class Liquid
+{
+    private int currentTemp;
+
+    public Liquid(int ct)
+    {
+        currentTemp = ct;
+    }
+
+    public void raiseTemperature(int increase) // Line 10
+    {
+        return currentTemp + increase; // Line 12
+    }
+}
+Which of the following changes should be made so that the class definition compiles without error and the method raiseTemperature works as intended?
+Ans: E
+A. Replace line 10 with public int raiseTemperature(int increase)
+B. Replace line 10 with public raiseTemperature(int increase)
+C. Replace line 12 with return currentTemp += increase;
+D. Replace line 12 with increase += currentTemp;
+E. Replace line 12 with currentTemp += increase;
+
+46. Consider the following class definition. The calculatePizzaCostPerPerson method is intended to calculate the amount each person at the party must pay for pizza. The amount is equal to the total price of all the pizza boxes divided by the number of people at the party. Which of the following code segments should replace missing code so that the calculatePizzaCostPerPerson method will work as intended?
+public class Party
+{
+    private int numOfPeople; //number of people at the party
+
+    public Party(int people)
+    {
+        numOfPeople = people;
+    }
+
+    public double calculatePizzaCostPerPerson(int numOfBoxes, double priceOfOnePizzaBox)
+    {
+        /* missing code */
+    }
+}
+A. return numOfPeople * numOfBoxes * priceOfOnePizzaBox;.
+B. return (numOfBoxes + priceOfOnePizzaBox) / numOfPeople;
+C. return (numOfBoxes * priceOfOnePizzaBox) / numOfPeople;
+D. return numOfBoxes / priceOfOnePizzaBox / numOfPeople;
+E. return numOfPeople / (numOfBoxes * priceOfOnePizzaBox);
+
+47. Consider the Party class below.
+public class Party
+{
+    private int numOfPeople; //number of people at the party
+    private int capacity;    //total capacity of people at party
+
+    public Party(int people, int cap)
+    {
+        numOfPeople = people;
+        capacity = cap;
+    }
+
+    public boolean updateNumOfPeople(int additionalPeople)
+    {
+        /* missing code */
+    }
+}
+The class contains the updateNumOfPeople method, which is intended to update the instance variable numOfPeople under certain conditions and return a value indicating whether the update was successful. If adding additionalPeople to the current number of people would lead to the number going over the capacity, then the update would be unsuccessful. Otherwise, if adding the number of additional people is still below or at the capacity, the update is successful. Which of the following code segments can replace missing code to ensure that the updateNumOfPeople method works as intended?
+
+I.  if (numOfPeople + additionalPeople > capacity)
+    {
+        return false;
+    }
+    else
+    {
+        numOfPeople += additionalPeople;
+        return true;
+    }
+II. if (numOfPeople + additionalPeople <= capacity)
+    {
+        numOfPeople += additionalPeople;
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+III. if (numOfPeople += additionalPeople <= capacity)
+     {
+        return true;
+     }
+     else
+     {
+        return false;
+     }
+Ans: C 
+A. II only
+B. I only
+C. I and II only
+D. I, II, and III
+E. III only
+
+48. Consider the following class definition.
+public class Liquid
+{
+    private int currentTemp;
+    private int boilingPoint;
+
+    public Liquid(int ct, int bp)
+    {
+        currentTemp = ct;
+        boilingPoint = bp;
+    }
+
+    public void changeTemp(int newTemp)
+    {
+        currentTemp = newTemp;
+    }
+
+    public void increaseTemp(int howMuch)
+    {
+        currentTemp = newTemp + howMuch;
+    }
+
+}
+Which of the following best explains why the class will not compile?
+Ans: E
+A. The class is missing an accessor method.
+B. The instance variables currentTemp and boilingPoint should be public instead of private.
+C. The Liquid constructor needs a return type.
+D. The Liquid class is missing a constructor.
+E. The variable newTemp is not defined in the increaseTemp method.
+
+49. Consider the following class definition for Party. The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?
+Party p = new Party(20, 15);
+p.orderMoreFood(20);
+p.eatFood(5);
+System.out.println(p.getBoxesOfFood());
+
+public class Party
+{
+ private int boxesOfFood;
+ private int numOfPeople;
+
+ public Party(int people, int foodBoxes)
+ {
+     numOfPeople = people;
+     boxesOfFood = foodBoxes;
+ }
+
+ public void orderMoreFood(int additionalFoodBoxes)
+ {
+     int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
+     boxesOfFood = updatedAmountOfFood;
+ }
+
+ public int getNumOfPeople() {
+     return numOfPeople;
+ }
+
+ public int getBoxesOfFood() {
+     return boxesOfFood;
+ }
+
+ public void eatFood(int eatenBoxes)
+ {
+     boxesOfFood = updatedAmountOfFood - eatenBoxes;
+ }
+}
+Ans: D
+A. The private variables boxesOfFood and numOfPeople are not properly initialized.
+B. The private variables boxesOfFood and numOfPeople should have been declared public.
+C. The public method getBoxesOfFood should have been declared private.
+D. The variable updatedAmountOfFood in the eatFoodBoxes method is not declared in this method.
+E. The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.
+
+50. Consider the following class definitions.
+public class Party
+{
+    private String partyHost;
+    private int monthOfParty;
+    private int partyStartTime;
+
+    public Party (String h, int month, int startTime)
+    {
+        partyHost = h;
+        monthOfParty = month;
+        partyStartTime = startTime;
+    }
+
+    public int getMonth()
+    {
+        return monthOfParty;
+    }
+
+    public int getStartTime()
+    {
+        return partyStartTime;
+    }
+
+    public String getHost()
+    {
+        return partyHost;
+    }
+
+    public void addToOptions(PartyOptions o)
+    {
+        o.addParty(this);
+    }
+}
+
+public class PartyOptions
+{
+    private int onlyThisMonth;
+
+    public PartyOptions(int month)
+    {
+        onlyThisMonth = month;
+    }
+
+    /* A Party should only be added to this PartyOption if the party’s month matches onlyThisMonth */
+    public void addParty(Party p)
+    {
+        if (p.getMonth() == onlyThisMonth)
+        {
+            System.out.print("Party by " + p.getHost() + " accepted; ");
+        }
+        else
+        {
+            System.out.print("Party by " + p.getHost() + " rejected; ");
+        }
+    }
+}
+Consider the following code segment, which appears in a class other than Party or PartyOptions.
+
+Party p1 = new Party("Kerry", 10, 7);
+Party p2 = new Party("Jules", 9, 6);
+
+PartyOptions options = new PartyOptions(10);
+p1.addToOptions(options);
+p2.addToOptions(options);
+A. Party by Kerry rejected; Party by Jules rejected;
+B. Party by Kerry rejected; Party by Jules accepted;
+C. Party by Kerry accepted; Party by Jules rejected;
+D. Party by Kerry accepted; Party by Jules accepted;
